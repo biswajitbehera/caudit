@@ -4,8 +4,7 @@
   "description": "caudit",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon -e css,ejs,js,json app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"    
   },
   "repository": {
     "type": "git",
