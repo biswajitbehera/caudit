@@ -1,0 +1,25 @@
+{
+  "name": "caudit",
+  "version": "1.0.0",
+  "description": "caudit",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon -e css,ejs,js,json app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/biswajitbehera/caudit.git"
+  },
+  "author": "Amforked",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/biswajitbehera/caudit/issues"
+  },
+  "homepage": "https://github.com/biswajitbehera/caudit#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "reload": "^2.2.2"
+  }
+}

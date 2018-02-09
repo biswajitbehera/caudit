@@ -1,0 +1,58 @@
+<!-- code for generating printable report from raw JSON reports. -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include partials/template/head.ejs %>
+  </head>
+
+<body id="<%= pageId %>">
+  <!-- header and banner -->
+      <% include partials/template/header.ejs %>
+  <!-- header ends -->
+
+<!-- Container -->
+  <div class="container">
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="maincontent">
+            <h2>Detailed Audit Report for <%= reportname%></h2>
+            <h4>We have <%= findings.length %> findings in this report.</h4>
+            <div class="list-group">
+              <table class="table table-condensed">
+                <thead>
+                  <tr>
+                    <th>Component</th>
+                    <th>Resource</th>
+                    <th>Region</th>
+                    <th>Issue</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <% findings.forEach((function(finding){ %>
+                  <tr>
+                  <td><%= finding.category %></td>
+                  <td><%= finding.resource %></td>
+                  <td><%= finding.region %></td>
+                  <td><%= finding.message %></td>
+                  <td><%= finding.status %></td>
+                </tr>
+                <%}))%>
+              </table>
+            </div>
+
+
+
+          </div>
+        </div><!-- primary -->
+        <aside class="col-sm-4">
+
+        </aside><!-- secondary -->
+      </div>
+    </div>
+<!-- Container ends -->
+
+<% include partials/template/footer.ejs %>
+
+<script src="/reload/reload.js"></script>
+</body>
+</html>

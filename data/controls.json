@@ -1,0 +1,232 @@
+{
+  "controls": [
+  {
+    "id":"F1",
+    "type":"Foundation",
+    "title":"IAM on all accounts and resources",
+    "description": "To be documented"
+  },
+  {
+    "id":"F2",
+    "type":"Foundation",
+    "title":"Owner/cost tagging for all resources",
+    "description": "To be documented"
+  },
+  {
+    "id":"F3",
+    "type":"Foundation",
+    "title":"Platform audit logs & platform security monitoring",
+    "description": "To be documented"
+  },
+  {
+    "id":"F4",
+    "type":"Foundation",
+    "title":"Monitor and assess updated CSP Service Terms and Audit reports",
+    "description": "To be documented"
+  },
+  {
+    "id":"F5",
+    "type":"Foundation",
+    "title":"Virus/Malware protection",
+    "description": "To be documented"
+  },
+  {
+    "id":"S1",
+    "type":"Standard",
+    "title":"MFA for all user accounts",
+    "description": "To be documented"
+  },
+  {
+    "id":"S2",
+    "type":"Standard",
+    "title":"Infrastructure as Code",
+    "description": "To be documented"
+  },
+  {
+    "id":"S3",
+    "type":"Standard",
+    "title":"Declarative configuration management",
+    "description": "To be documented"
+  },
+  {
+    "id":"S4",
+    "type":"Standard",
+    "title":"Automated & enforced patch management",
+    "description": "To be documented"
+  },
+  {
+    "id":"S5",
+    "type":"Standard",
+    "title":"Security and event monitoring and correlation",
+    "description": "To be documented"
+  },
+  {
+    "id":"S6",
+    "type":"Standard",
+    "title":"Secure applications on application level, use network isolation with generic tier levels if application level security is deficient",
+    "description": "To be documented"
+  },
+  {
+    "id":"S7",
+    "type":"Standard",
+    "title":"Only vendor supported OS and application versions",
+    "description": "To be documented"
+  },
+  {
+    "id":"S8",
+    "type":"Standard",
+    "title":"Control routing path and monitor outbound traffic from CSP Private to Public. Access will be managed based on patterns",
+    "description": "To be documented"
+  },
+  {
+    "id":"S9",
+    "type":"Standard",
+    "title":"Control routing path and monitor traffic from CSP Public to organisaitons on-premises networks",
+    "description": "To be documented"
+  },
+  {
+    "id":"S10",
+    "type":"Standard",
+    "title":"Allow only desired network protocols from Internet",
+    "description": "To be documented"
+  },
+  {
+    "id":"S11",
+    "type":"Standard",
+    "title":"No direct inbound traffic form CSP Public and Internet (Perimeter Defense)",
+    "description": "To be documented"
+  },
+  {
+    "id":"S12",
+    "type":"Standard",
+    "title":"Secure web publishing is handled by application, virtual appliance or cloud service",
+    "description": "To be documented"
+  },
+  {
+    "id":"S13",
+    "type":"Standard",
+    "title":"Connectivity controls on organisations public cloud and end-points",
+    "description": "To be documented"
+  },
+  {
+    "id":"S14",
+    "type":"Standard",
+    "title":"Only approved & authorized cloud services can be deployed",
+    "description": "To be documented"
+  },
+  {
+    "id":"S15",
+    "type":"Standard",
+    "title":"Periodic credential based vulnerability scanning",
+    "description": "To be documented"
+  },
+  {
+    "id":"S16",
+    "type":"Standard",
+    "title":"Data leakage must be prevented",
+    "description": "To be documented"
+  },
+  {
+    "id":"B1",
+    "type":"Basic",
+    "title":"Encrypt data in transit over public interconnects",
+    "description": "To be documented"
+  },
+  {
+    "id":"B2",
+    "type":"Basic",
+    "title":"Encrypt data at rest for public services which have no IAM controls",
+    "description": "To be documented"
+  },
+  {
+    "id":"B3",
+    "type":"Basic",
+    "title":"Routing path to internet must be controlled by organisational security perimeter",
+    "description": "To be documented"
+  },
+  {
+    "id":"A1",
+    "type":"Advanced",
+    "title":"Encrypt data in transit over public and private interconnections",
+    "description": "To be documented"
+  },
+  {
+    "id":"A2",
+    "type":"Advanced",
+    "title":"Encrypt data at rest for all storage services",
+    "description": "To be documented"
+  },
+  {
+    "id":"A3",
+    "type":"Advanced",
+    "title":"Key management controlled by HSM/Organisation",
+    "description": "To be documented"
+  },
+  {
+    "id":"A4",
+    "type":"Advanced",
+    "title":"Isolation on application network tier level (single application containment) by exception only",
+    "description": "To be documented"
+  },
+  {
+    "id":"A5",
+    "type":"Advanced",
+    "title":"Routing path to internet must be controlled by orgnisations managed security perimeter, access will be managed based on patterns including layer 7 inspection",
+    "description": "To be documented"
+  },
+  {
+    "id":"A6",
+    "type":"Advanced",
+    "title":"Web Application Firewall for web publishing",
+    "description": "To be documented"
+  },
+  {
+    "id":"A7",
+    "type":"Advanced",
+    "title":"Application security events (e.g. modified security settings) and exceptions must be logged ",
+    "description": "To be documented"
+  },
+  {
+    "id":"X1",
+    "type":"Complementary",
+    "title":"Usage terms and conditions prescribe an isolated environment. Relationships with the organisation and use for development and test purposes are prohibited",
+    "description": "To be documented"
+  },
+  {
+    "id":"X2",
+    "type":"Complementary",
+    "title":"Terms of use for the Flex-zone Environment prescribe minimum OS level (n-1)",
+    "description": "To be documented"
+  },
+  {
+    "id":"X3",
+    "type":"Complementary",
+    "title":"Allow default routing path for outbound traffic to public cloud services and Internet",
+    "description": "To be documented"
+  },
+  {
+    "id":"X4",
+    "type":"Complementary",
+    "title":"No network connectivity with CIA rated Virtual Private Networks",
+    "description": "To be documented"
+  },
+  {
+    "id":"X5",
+    "type":"Complementary",
+    "title":"No outbound network connectivity with organisations on-premises network",
+    "description": "To be documented"
+  },
+  {
+    "id":"X6",
+    "type":"Complementary",
+    "title":"VM’s with Public Endpoints must be reported to the SOC to allow possibility for vulnerability scan",
+    "description": "To be documented"
+  },
+  {
+    "id":"X7",
+    "type":"Complementary",
+    "title":"Auto purge (limited time period, non-persistent trial workloads only)",
+    "description": "To be documented"
+  }
+  ]
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include partials/template/head.ejs %>
+  </head>
+
+<body id="<%= pageId %>">
+  <!-- header and banner -->
+      <% include partials/template/header.ejs %>
+  <!-- header ends -->
+
+<!-- Container -->
+  <div class="container">
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="maincontent">
+            <h2>Audit reports repository</h2>
+
+            <% if (files.length>0){ var i=0; %>
+              <h4>It seems there are <%= files.length %> reports. Click on the report to get more info.</h4>
+              <p><b>Reports</b></p>
+              <ul class="list-group">
+            <%  files.forEach(function(item){ %>
+              <% var ftdate = item.substring(3, item.indexOf('.js')); %>
+              <% var ite = item.substring(0,item.indexOf('.js'));%>
+              <% var date=new Date(parseInt(ftdate)); %>
+                <li class="list-group-item"><a href="/audits/<%= item %>"><%= ite %></a> | Scantime - <%=date%></li>
+              <% i++;}) %></ul>
+            <% }else{ %><h2>No reports were found!</h2><% } %>
+          </div>
+        </div><!-- primary -->
+        <aside class="col-sm-4">
+
+        </aside><!-- secondary -->
+      </div>
+    </div>
+<!-- Container ends -->
+
+<% include partials/template/footer.ejs %>
+<script src="/reload/reload.js"></script>
+</body>
+</html>

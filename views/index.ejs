@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include partials/template/head.ejs %>
+  </head>
+
+<body id="<%= pageId %>">
+<!-- header and banner -->
+    <% include partials/template/header.ejs %>
+<!-- header ends -->
+
+<!-- Container -->
+  <div class="container">
+          <div class="row">
+        <div class="col-sm-8">
+          <div class="maincontent">
+          <h2>Welcome to CAudit.</h2> <h4>Automate security controls audit of your public cloud infrastructure.</h4>
+          <br/><br/><br/><br/><br/><br/>
+          <!-- <img src="images/banner.png" class="img-fluid" alt="Responsive image" width="100%"/><br/> -->
+          </div>
+        </div><!-- primary -->
+        <aside class="col-sm-4">
+
+        </aside><!-- secondary -->
+      </div>
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100">
+            <h4 class="card-header">Control</h4>
+            <div class="card-body">
+              <p class="card-text">Import security controls for your public cloud enviroments from your organisational GRC framework/policies or global standards (NIST, COBIT etc.)</p>
+            </div>
+            <div class="card-footer">
+              <a href="/controls" class="btn btn-primary">Check sample controls</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100">
+            <h4 class="card-header">Audit</h4>
+            <div class="card-body">
+              <p class="card-text">Our scalable and easily extensible plugin based audit infrastructur enables you to assess the state of security controls in your public cloud deployments.</p>
+            </div>
+            <div class="card-footer">
+              <a href="/audits" class="btn btn-primary">Check sample audit reports</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100">
+            <h4 class="card-header">Mitigate</h4>
+            <div class="card-body">
+              <p class="card-text">Audit results include advice on resulting risks and mitigation strategy per risk to ensure that your public cloud deployments are secure.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Learn about risk mitigation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+    </div>
+<!-- Container ends -->
+<% include partials/template/footer.ejs %>
+
+<script src="/reload/reload.js"></script>
+</body>
+</html>
