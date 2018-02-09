@@ -16,7 +16,7 @@ router.get('/audits',function(request, response){
 
 router.get('/audits/:report',function(request, response){
     var reportname = request.params.report;
-    var report = fs.readFileSync(path+'\\'+reportname);
+    var report = fs.readFileSync(path+'/'+reportname);
     findings = JSON.parse(report);
     // var statistics = [{'ok':0,'warn':0,'fail':0,'unknown':0 }];
     // // statistics
