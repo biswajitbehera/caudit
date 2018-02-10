@@ -3,6 +3,8 @@ var router = express.Router();
 var fs = require('fs');
 var findings;
 var path ="data/reports";
+var rstats = ['OK','WARN','FAIL','UNKNOWN'];
+var issues = [0,0,0,0];
 
 router.get('/audits',function(request, response){
   var files=[];
@@ -18,11 +20,28 @@ router.get('/audits/:report',function(request, response){
     var reportname = request.params.report;
     var report = fs.readFileSync(path+'/'+reportname);
     findings = JSON.parse(report);
-    // var statistics = [{'ok':0,'warn':0,'fail':0,'unknown':0 }];
-    // // statistics
-    // findings.forEach(function(finding){
-    //   if(finding.status=='OK'){statistics['ok']++;}
-    // })
+    issues = [0,0,0,0]; //reset issues
+
+    // statistics
+    findings.forEach(function(finding){
+      switch(finding.status){
+        case "OK":
+          issues[0]++;
+          break;
+        case "WARN":
+            issues[1]++;
+          break;
+        case "FAIL":
+          issues[2]++;
+          break;
+        case "UNKNOWN":
+          issues[3]++;
+          break;
+        default:
+      }
+      // console.log(issues);
+    });
+
 
     // response.send(findings[0].category);
 
@@ -30,7 +49,9 @@ router.get('/audits/:report',function(request, response){
       pageTitle: 'Audit Report',
       pageId: 'auditreport',
       findings: findings,
-      reportname: reportname
+      reportname: reportname,
+      rstats: rstats,
+      issues: issues
     });
 })
 

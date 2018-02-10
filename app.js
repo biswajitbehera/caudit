@@ -2,6 +2,8 @@ var fs=require("fs");
 var express = require('express');
 var reload = require('reload');
 var app = express();
+var chart = require('chart.js');
+
 const port=process.env.PORT || 9090;
 
 //Read JSON

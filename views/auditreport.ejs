@@ -8,6 +8,7 @@
 <body id="<%= pageId %>">
   <!-- header and banner -->
       <% include partials/template/header.ejs %>
+      <% include partials/template/djs.ejs %>
   <!-- header ends -->
 
 <!-- Container -->
@@ -16,27 +17,25 @@
         <div class="col-sm-8">
           <div class="maincontent">
             <h2>Detailed Audit Report for <%= reportname%></h2>
-            <h4>We have <%= findings.length %> findings in this report.</h4>
+            <h4><%= findings.length %> controls were tested. <%= issues[1]+issues[2]+issues[3]%> issues were reported. [<a href="/audits/">Back to audit repository</a>]</h4>
             <div class="list-group">
-              <table class="table table-condensed">
+              <table class="table table-condensed .table-responsive">
                 <thead>
                   <tr>
                     <th>Component</th>
-                    <th>Resource</th>
                     <th>Region</th>
                     <th>Issue</th>
                     <th>Status</th>
                   </tr>
                 </thead>
-                <% findings.forEach((function(finding){ %>
+                <% findings.forEach((function(finding){ if(finding.status!="OK"){ %>
                   <tr>
                   <td><%= finding.category %></td>
-                  <td><%= finding.resource %></td>
                   <td><%= finding.region %></td>
                   <td><%= finding.message %></td>
                   <td><%= finding.status %></td>
                 </tr>
-                <%}))%>
+                <%}}))%>
               </table>
             </div>
 
@@ -44,8 +43,43 @@
 
           </div>
         </div><!-- primary -->
-        <aside class="col-sm-4">
 
+
+        <aside class="col-sm-4">
+          <br/><br/>
+          <div class="card h-100">
+            <h4 class="card-header">Issue statistics</h4>
+          <canvas id="issuestats" class="chart chart-doughnut" chart-data="data" chart-labels="labels">
+          </canvas>
+          <script>
+          var canvas = document.getElementById('issuestats');
+          var chart = new Chart(canvas,{
+            type: 'doughnut',
+            data: {labels: <%- JSON.stringify(rstats); %>,
+            datasets: [
+              {
+                label: "Issue Stats",
+                backgroundColor: ['#00C851','#FFBB33','#FF4444','#BDBDBD'],
+                borderColor: '#00ADF9',
+                borderWidth: 0,
+                data: <%- JSON.stringify(issues); %>,
+              }
+            ]},
+            options:{}
+          });
+          </script>
+        </div>
+        <div>
+          <br/>
+          <h4 class="card-header">General recommendations</h4>
+          <p><ul class="list-group">
+            <li class="list-group-item list-group-item-danger">'FAIL' issues pose a HIGH risk and should be mitigated immediately.</li>
+            <li class="list-group-item list-group-item-warning">'WARN' issues are concerning. Consult security professional for mitigation/resolution.</li>
+            <li class="list-group-item list-group-item-info">'UNKNOWN' issues should be validated in the context of your deployment for any actual risks.</li>
+            <li class="list-group-item list-group-item-success">'OK' hurray, you have configured it right!</li>
+          </ul>
+          </p>
+        </div>
         </aside><!-- secondary -->
       </div>
     </div>

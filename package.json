@@ -4,7 +4,7 @@
   "description": "caudit",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"    
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/biswajitbehera/caudit#readme",
   "dependencies": {
+    "chart.js": "^2.7.1",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "reload": "^2.2.2"

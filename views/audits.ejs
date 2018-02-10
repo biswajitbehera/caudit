@@ -17,7 +17,7 @@
             <h2>Audit reports repository</h2>
 
             <% if (files.length>0){ var i=0; %>
-              <h4>It seems there are <%= files.length %> reports. Click on the report to get more info.</h4>
+              <h4>It seems there are <%= files.length %> reports. Click on report for more info.</h4>
               <p><b>Reports</b></p>
               <ul class="list-group">
             <%  files.forEach(function(item){ %>
@@ -27,6 +27,7 @@
                 <li class="list-group-item"><a href="/audits/<%= item %>"><%= ite %></a> | Scantime - <%=date%></li>
               <% i++;}) %></ul>
             <% }else{ %><h2>No reports were found!</h2><% } %>
+            <p><i>Scans are performed by internal toolkit.</i></p>
           </div>
         </div><!-- primary -->
         <aside class="col-sm-4">
