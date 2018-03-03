@@ -2,14 +2,14 @@ var express = require('express');
 var router = express.Router();
 var fs = require('fs');
 var findings;
-var path ="data/reports";
+var path ="./data/reports";
 var rstats = ['OK','WARN','FAIL','UNKNOWN'];
 var issues = [0,0,0,0];
 
 router.get('/audits',function(request, response){
   var files=[];
       files=fs.readdirSync(path);
-      response.render('audits',{
+  response.render('audits',{
       pageTitle: 'Audits',
       pageId: 'audits',
       files: files

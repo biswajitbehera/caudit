@@ -14,15 +14,16 @@
       <div class="row">
         <div class="col-sm-8">
           <div class="maincontent">
-            <h2>Cloud Security Controls(CSCs)</h2>
-            <h4>We have <%= controls.length %> CSCs are categorised into 4 key types. CSCs are generic and may used for assessing any public cloud deployment.</h4>
+            <h2></h2>
+            <h4>There are <%= controls.length %> controls in the framework. For more info about the framework visit: <a href=''>Framework</a></h4>
+            <h5><% %></h5>
 
             <div class="table-responsive">
             <table class="table table-condensed">
               <thead>
                 <tr>
                   <th>ID</th>
-                  <th>Control</th>
+                  <th>Control Description/Title</th>
                 </tr>
               </thead>
               <tbody>
@@ -30,7 +31,7 @@
             <%  controls.forEach(function(item){ %>
                 <tr>
                   <td><%= item.id %></td>
-                  <td><a href="controls/<%=i%>"><%= item.title %></a></td>
+                  <td><a href="controls/<%=i%>"><%= item.title %><%= item.description%></a></td>
                 </tr>
               <% i++;}) %>
             <% } %>

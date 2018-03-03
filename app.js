@@ -1,13 +1,21 @@
 var fs=require("fs");
-var express = require('express');
-var reload = require('reload');
-var app = express();
-var chart = require('chart.js');
+const express = require('express');
+const reload = require('reload');
+const chart = require('chart.js');
+const mongoose = require('mongoose');
 
+const app = express();
+
+//Global variables
 const port=process.env.PORT || 9090;
 
+//Set Database connection
+mongoose.connect('mongodb://localhost/caudit')
+  .then(() => console.log('MongoDb connected.'))
+  .catch(err => console.log(err));
+
 //Read JSON
-var dataFile = fs.readFileSync('data/controls.json');
+var dataFile = fs.readFileSync('data/controls/frameworks/NIST-800-53.json');
 var data = JSON.parse(dataFile);
 
 //Set locals
@@ -29,6 +37,7 @@ app.set('views', './views/');
 app.use(require('./routes/index'));
 app.use(require('./routes/controls'));
 app.use(require('./routes/audits'));
+app.use(require('./routes/account'));
 
 // for(var category in findings){
 //   if (findings[category].status!="OK"){

@@ -5,14 +5,21 @@ var router = express.Router();
 router.get('/controls',function(request, response){
   var info ='';
   var count = 0;
+  var frameworkname='';
+  var url ='';
+  var fwdescription='';
   data = request.app.get('appData');
+
 
 // Need to improvise he array.
 
   response.render('controls',{
-    pageTitle: 'Cloud Controls',
+    pageTitle: 'Frameworks and Controls',
     pageId:'controls',
-    controls:data.controls
+    controls:data.controls,
+    frameworkname: data.frameworkname,
+    url: data.url,
+    fwdescription: data.description
   })
   // response.send(`
   //   <h1>CBSP Controls</h1>

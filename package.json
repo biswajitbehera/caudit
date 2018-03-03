@@ -4,7 +4,8 @@
   "description": "caudit",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "nodemon -e css,ejs,js,json  app.js"
   },
   "repository": {
     "type": "git",
@@ -17,9 +18,11 @@
   },
   "homepage": "https://github.com/biswajitbehera/caudit#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "chart.js": "^2.7.1",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
+    "mongoose": "^5.0.4",
     "reload": "^2.2.2"
   }
 }

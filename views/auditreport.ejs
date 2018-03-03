@@ -19,6 +19,7 @@
             <h2>Detailed Audit Report for <%= reportname%></h2>
             <h4><%= findings.length %> controls were tested. <%= issues[1]+issues[2]+issues[3]%> issues were reported. [<a href="/audits/">Back to audit repository</a>]</h4>
             <div class="list-group">
+              <h5><b>Issues reported</b></h5>
               <table class="table table-condensed .table-responsive">
                 <thead>
                   <tr>
@@ -39,16 +40,13 @@
               </table>
             </div>
 
-
-
           </div>
         </div><!-- primary -->
 
-
         <aside class="col-sm-4">
           <br/><br/>
-          <div class="card h-100">
-            <h4 class="card-header">Issue statistics</h4>
+          <div>
+          <h5><b>Issue statistics</b></h5>
           <canvas id="issuestats" class="chart chart-doughnut" chart-data="data" chart-labels="labels">
           </canvas>
           <script>
@@ -68,7 +66,7 @@
             options:{}
           });
           </script>
-        </div>
+          </div>
         <div>
           <br/>
           <h4 class="card-header">General recommendations</h4>
