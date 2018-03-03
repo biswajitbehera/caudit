@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include partials/template/head.ejs %>
+  </head>
+
+<body id="<%= pageId %>">
+  <!-- header and banner -->
+      <% include partials/template/header.ejs %>
+  <!-- header ends -->
+
+<!-- Container -->
+  <div class="container">
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="maincontent">
+            <h2></h2>
+            <h4>Following global frameoworks are relevant in the context of Cloud Deployment. Click on framework for more details</h4>
+            <h5><% %></h5>
+
+            <div class="table-responsive">
+            <table class="table table-condensed">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Control Description/Title</th>
+                </tr>
+              </thead>
+              <tbody>
+            <% if (controls.length>0){ var i=0;%>
+            <%  controls.forEach(function(item){ %>
+                <tr>
+                  <td><%= item.id %></td>
+                  <td><a href="controls/<%=i%>"><%= item.title %><%= item.description%></a></td>
+                </tr>
+              <% i++;}) %>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+          </div>
+        </div><!-- primary -->
+        <aside class="col-sm-4">
+
+        </aside><!-- secondary -->
+      </div>
+    </div>
+<!-- Container ends -->
+
+<% include partials/template/footer.ejs %>
+
+<script src="/reload/reload.js"></script>
+</body>
+</html>

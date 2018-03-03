@@ -1,0 +1,672 @@
+{
+"frameworkname":"Cloud Control Matrix, CCM v3.0",
+"description":"The Cloud Security Alliance Cloud Controls Matrix (CCM) is specifically designed to provide fundamental security principles to guide cloud vendors and to assist prospective cloud customers in assessing the overall security risk of a cloud provider. The CSA CCM provides a controls framework that gives detailed understanding of security concepts and principles that are aligned to the Cloud Security Alliance guidance in 13 domains.",
+"url":"http://www.cloudsecurityalliance.org",
+"controls":[
+ {
+   "domain": "Application & Interface Security\nApplication Security",
+   "id": "AIS-01",
+   "description": "Applications and programming interfaces (APIs) shall be designed, developed, deployed, and tested in accordance with leading industry standards (e.g., OWASP for web applications) and adhere to applicable legal, statutory, or regulatory compliance obligations."
+ },
+ {
+   "domain": "Application & Interface Security\nCustomer Access Requirements",
+   "id": "AIS-02",
+   "description": "Prior to granting customers access to data, assets, and information systems, identified security, contractual, and regulatory requirements for customer access shall be addressed."
+ },
+ {
+   "domain": "Application & Interface Security\nData Integrity",
+   "id": "AIS-03",
+   "description": "Data input and output integrity routines (i.e., reconciliation and edit checks) shall be implemented for application interfaces and databases to prevent manual or systematic processing errors, corruption of data, or misuse."
+ },
+ {
+   "domain": "Application & Interface Security\nData Security / Integrity",
+   "id": "AIS-04",
+   "description": "Policies and procedures shall be established and maintained in support of data security to include (confidentiality, integrity, and availability) across multiple system interfaces, jurisdictions, and business functions to prevent improper disclosure, alteration, or destruction."
+ },
+ {
+   "domain": "Audit Assurance & Compliance\nAudit Planning",
+   "id": "AAC-01",
+   "description": "Audit plans shall be developed and maintained to address business process disruptions. Auditing plans shall focus on reviewing the effectiveness of the implementation of security operations. All audit activities must be agreed upon prior to executing any audits."
+ },
+ {
+   "domain": "Audit Assurance & Compliance\nIndependent Audits",
+   "id": "AAC-02",
+   "description": "Independent reviews and assessments shall be performed at least annually to ensure that the organization addresses nonconformities of established policies, standards, procedures, and compliance obligations."
+ },
+ {
+   "domain": "Audit Assurance & Compliance\nInformation System Regulatory Mapping",
+   "id": "AAC-03",
+   "description": "Organizations shall create and maintain a control framework which captures standards, regulatory, legal, and statutory requirements relevant for their business needs. The control framework shall be reviewed at least annually to ensure changes that could affect the business processes are reflected."
+ },
+ {
+   "domain": "Business Continuity Management & Operational Resilience\nBusiness Continuity Planning",
+   "id": "BCR-01",
+   "description": "A consistent unified framework for business continuity planning and plan development shall be established, documented, and adopted to ensure all business continuity plans are consistent in addressing priorities for testing, maintenance, and information security requirements. \nRequirements for business continuity plans include the following:\n  Defined purpose and scope, aligned with relevant dependencies\n  Accessible to and understood by those who will use them\n Owned by a named person(s) who is responsible for their review, update, and approval\n  Defined lines of communication, roles, and responsibilities\n  Detailed recovery procedures, manual work-around, and reference information\n  Method for plan invocation"
+ },
+ {
+   "domain": "Business Continuity Management & Operational Resilience\nBusiness Continuity Testing",
+   "id": "BCR-02",
+   "description": "Business continuity and security incident response plans shall be subject to testing at planned intervals or upon significant organizational or environmental changes. Incident response plans shall involve impacted customers (tenant) and other business relationships that represent critical intra-supply chain business process dependencies."
+ },
+ {
+   "domain": "Business Continuity Management & Operational Resilience\nDatacenter Utilities / Environmental Conditions",
+   "id": "BCR-03",
+   "description": "Data center utilities services and environmental conditions (e.g., water, power, temperature and humidity controls, telecommunications, and internet connectivity) shall be secured, monitored, maintained, and tested for continual effectiveness at planned intervals to ensure protection from unauthorized interception or damage, and designed with automated fail-over or other redundancies in the event of planned or unplanned disruptions."
+ },
+ {
+   "domain": "Business Continuity Management & Operational Resilience\nDocumentation",
+   "id": "BCR-04",
+   "description": "Information system documentation (e.g., administrator and user guides, and architecture diagrams) shall be made available to authorized personnel to ensure the following:\nConfiguring, installing, and operating the information system\n  Effectively using the systems security features"
+ },
+ {
+   "domain": "Business Continuity Management & Operational Resilience\nEnvironmental Risks",
+   "id": "BCR-05",
+   "description": "Physical protection against damage from natural causes and disasters, as well as deliberate attacks, including fire, flood, atmospheric electrical discharge, solar induced geomagnetic storm, wind, earthquake, tsunami, explosion, nuclear accident, volcanic activity, biological hazard, civil unrest, mudslide, tectonic activity, and other forms of natural or man-made disaster shall be anticipated, designed, and have countermeasures applied."
+ },
+ {
+   "domain": "Business Continuity Management & Operational Resilience\nEquipment Location",
+   "id": "BCR-06",
+   "description": "To reduce the risks from environmental threats, hazards, and opportunities for unauthorized access, equipment shall be kept away from locations subject to high probability environmental risks and supplemented by redundant equipment located at a reasonable distance."
+ },
+ {
+   "domain": "Business Continuity Management & Operational Resilience\nEquipment Maintenance",
+   "id": "BCR-07",
+   "description": "Policies and procedures shall be established, and supporting business processes and technical measures implemented, for equipment maintenance ensuring continuity and availability of operations and support personnel."
+ },
+ {
+   "domain": "Business Continuity Management & Operational Resilience\nEquipment Power Failures",
+   "id": "BCR-08",
+   "description": "Protection measures shall be put into place to react to natural and man-made threats based upon a geographically-specific business impact assessment."
+ },
+ {
+   "domain": "Business Continuity Management & Operational Resilience\nImpact Analysis",
+   "id": "BCR-09",
+   "description": "There shall be a defined and documented method for determining the impact of any disruption to the organization (cloud provider, cloud consumer) that must incorporate the following:\n  Identify critical products and services\n  Identify all dependencies, including processes, applications, business partners, and third party service providers\n  Understand threats to critical products and services\n  Determine impacts resulting from planned or unplanned disruptions and how these vary over time\n  Establish the maximum tolerable period for disruption\n  Establish priorities for recovery\n  Establish recovery time objectives for resumption of critical products and services within their maximum tolerable period of disruption\n  Estimate the resources required for resumption"
+ },
+ {
+   "domain": "Business Continuity Management & Operational Resilience\nPolicy",
+   "id": "BCR-10",
+   "description": "Policies and procedures shall be established, and supporting business processes and technical measures implemented, for appropriate IT governance and service management to ensure appropriate planning, delivery, and support of the organization's IT capabilities supporting business functions, workforce, and/or customers based on industry acceptable standards (i.e., ITIL v4 and COBIT 5). Additionally, policies and procedures shall include defined roles and responsibilities supported by regular workforce training."
+ },
+ {
+   "domain": "Business Continuity Management & Operational Resilience\nRetention Policy",
+   "id": "BCR-11",
+   "description": "Policies and procedures shall be established, and supporting business processes and technical measures implemented, for defining and adhering to the retention period of any critical asset as per established policies and procedures, as well as applicable legal, statutory, or regulatory compliance obligations. Backup and recovery measures shall be incorporated as part of business continuity planning and tested accordingly for effectiveness."
+ },
+ {
+   "domain": "Change Control & Configuration Management\nNew Development / Acquisition",
+   "id": "CCC-01",
+   "description": "Policies and procedures shall be established, and supporting business processes and technical measures implemented, to ensure the development and/or acquisition of new data, physical or virtual applications, infrastructure network, and systems components, or any corporate, operations and/or data center facilities have been pre-authorized by the organization's business leadership or other accountable business role or function."
+ },
+ {
+   "domain": "Change Control & Configuration Management\nOutsourced Development",
+   "id": "CCC-02",
+   "description": "External business partners shall adhere to the same policies and procedures for change management, release, and testing as internal developers within the organization (e.g., ITIL service management processes)."
+ },
+ {
+   "domain": "Change Control & Configuration Management\nQuality Testing",
+   "id": "CCC-03",
+   "description": "Organizations shall follow a defined quality change control and testing process (e.g., ITIL Service Management) with established baselines, testing, and release standards that focus on system availability, confidentiality, and integrity of systems and services."
+ },
+ {
+   "domain": "Change Control & Configuration Management\nUnauthorized Software Installations",
+   "id": "CCC-04",
+   "description": "Policies and procedures shall be established, and supporting business processes and technical measures implemented, to restrict the installation of unauthorized software on organizationally-owned or managed user end-point devices (e.g., issued workstations, laptops, and mobile devices) and IT infrastructure network and systems components."
+ },
+ {
+   "domain": "Change Control & Configuration Management\nProduction Changes",
+   "id": "CCC-05",
+   "description": "Policies and procedures shall be established for managing the risks associated with applying changes to:\n  Business-critical or customer (tenant)-impacting (physical and virtual) applications and system-system interface (API) designs and configurations.\n  Infrastructure network and systems components.\nTechnical measures shall be implemented to provide assurance that all changes directly correspond to a registered change request, business-critical or customer (tenant), and/or authorization by, the customer (tenant) as per agreement (SLA) prior to deployment."
+ },
+ {
+   "domain": "Data Security & Information Lifecycle Management \nClassification",
+   "id": "DSI-01",
+   "description": "Data and objects containing data shall be assigned a classification by the data owner based on data type, value, sensitivity, and criticality to the organization."
+ },
+ {
+   "domain": "Data Security & Information Lifecycle Management\nData Inventory / Flows",
+   "id": "DSI-02",
+   "description": "Policies and procedures shall be established, and supporting business processes and technical measures implemented, to inventory, document, and maintain data flows for data that is resident (permanently or temporarily) within the service's geographically distributed (physical and virtual) applications and infrastructure network and systems components and/or shared with other third parties to ascertain any regulatory, statutory, or supply chain agreement (SLA) compliance impact, and to address any other business risks associated with the data. Upon request, provider shall inform customer (tenant) of compliance impact and risk, especially if customer data is used as part of the services."
+ },
+ {
+   "domain": "Data Security & Information Lifecycle Management\nEcommerce Transactions",
+   "id": "DSI-03",
+   "description": "Data related to electronic commerce (ecommerce) that traverses public networks shall be appropriately classified and protected from fraudulent activity, unauthorized disclosure, or modification in such a manner to prevent contract dispute and compromise of data."
+ },
+ {
+   "domain": "Data Security & Information Lifecycle Management\nHandling / Labeling / Security Policy",
+   "id": "DSI-04",
+   "description": "Policies and procedures shall be established for the labeling, handling, and security of data and objects which contain data. Mechanisms for label inheritance shall be implemented for objects that act as aggregate containers for data."
+ },
+ {
+   "domain": "Data Security & Information Lifecycle Management\nNon-Production Data",
+   "id": "DSI-05",
+   "description": "Production data shall not be replicated or used in non-production environments. Any use of customer data in non-production environments requires explicit, documented approval from all customers whose data is affected, and must comply with all legal and regulatory requirements for scrubbing of sensitive data elements."
+ },
+ {
+   "domain": "Data Security & Information Lifecycle Management\nOwnership / Stewardship",
+   "id": "DSI-06",
+   "description": "All data shall be designated with stewardship, with assigned responsibilities defined, documented, and communicated."
+ },
+ {
+   "domain": "Data Security & Information Lifecycle Management\nSecure Disposal",
+   "id": "DSI-07",
+   "description": "Policies and procedures shall be established with supporting business processes and technical measures implemented for the secure disposal and complete removal of data from all storage media, ensuring data is not recoverable by any computer forensic means."
+ },
+ {
+   "domain": "Datacenter Security\nAsset Management",
+   "id": "DCS-01",
+   "description": "Assets must be classified in terms of business criticality, service-level expectations, and operational continuity requirements. A complete inventory of business-critical assets located at all sites and/or geographical locations and their usage over time shall be maintained and updated regularly, and assigned ownership by defined roles and responsibilities."
+ },
+ {
+   "domain": "Datacenter Security\nControlled Access Points",
+   "id": "DCS-02",
+   "description": "Physical security perimeters (e.g., fences, walls, barriers, guards, gates, electronic surveillance, physical authentication mechanisms, reception desks, and security patrols) shall be implemented to safeguard sensitive data and information systems."
+ },
+ {
+   "domain": "Datacenter Security\nEquipment Identification",
+   "id": "DCS-03",
+   "description": "Automated equipment identification shall be used as a method of connection authentication. Location-aware technologies may be used to validate connection authentication integrity based on known equipment location."
+ },
+ {
+   "domain": "Datacenter Security\nOff-Site Authorization",
+   "id": "DCS-04",
+   "description": "Authorization must be obtained prior to relocation or transfer of hardware, software, or data to an offsite premises."
+ },
+ {
+   "domain": "Datacenter Security\nOff-Site Equipment",
+   "id": "DCS-05",
+   "description": "Policies and procedures shall be established for the secure disposal of equipment (by asset type) used outside the organization's premises. This shall include a wiping solution or destruction process that renders recovery of information impossible. The erasure shall consist of a full overwrite of the drive to ensure that the erased drive is released to inventory for reuse and deployment, or securely stored until it can be destroyed."
+ },
+ {
+   "domain": "Datacenter Security\nPolicy",
+   "id": "DCS-06",
+   "description": "Policies and procedures shall be established, and supporting business processes implemented, for maintaining a safe and secure working environment in offices, rooms, facilities, and secure areas storing sensitive information."
+ },
+ {
+   "domain": "Datacenter Security\nSecure Area Authorization",
+   "id": "DCS-07",
+   "description": "Ingress and egress to secure areas shall be constrained and monitored by physical access control mechanisms to ensure that only authorized personnel are allowed access."
+ },
+ {
+   "domain": "Datacenter Security\nUnauthorized Persons Entry",
+   "id": "DCS-08",
+   "description": "Ingress and egress points such as service areas and other points where unauthorized personnel may enter the premises shall be monitored, controlled and, if possible, isolated from data storage and processing facilities to prevent unauthorized data corruption, compromise, and loss."
+ },
+ {
+   "domain": "Datacenter Security\nUser Access",
+   "id": "DCS-09",
+   "description": "Physical access to information assets and functions by users and support personnel shall be restricted."
+ },
+ {
+   "domain": "Encryption & Key Management\nEntitlement",
+   "id": "EKM-01",
+   "description": "Keys must have identifiable owners (binding keys to identities) and there shall be key management policies."
+ },
+ {
+   "domain": "Encryption & Key Management\nKey Generation",
+   "id": "EKM-02",
+   "description": "Policies and procedures shall be established for the management of cryptographic keys in the service's cryptosystem (e.g., lifecycle management from key generation to revocation and replacement, public key infrastructure, cryptographic protocol design and algorithms used, access controls in place for secure key generation, and exchange and storage including segregation of keys used for encrypted data or sessions). Upon request, provider shall inform the customer (tenant) of changes within the cryptosystem, especially if the customer (tenant) data is used as part of the service, and/or the customer (tenant) has some shared responsibility over implementation of the control."
+ },
+ {
+   "domain": "Encryption & Key Management\nSensitive Data Protection",
+   "id": "EKM-03",
+   "description": "Policies and procedures shall be established, and supporting business processes and technical measures implemented, for the use of encryption protocols for protection of sensitive data in storage (e.g., file servers, databases, and end-user workstations), data in use (memory), and data in transmission (e.g., system interfaces, over public networks, and electronic messaging) as per applicable legal, statutory, and regulatory compliance obligations."
+ },
+ {
+   "domain": "Encryption & Key Management\nStorage and Access",
+   "id": "EKM-04",
+   "description": "Platform and data-appropriate encryption (e.g., AES-256) in open/validated formats and standard algorithms shall be required. Keys shall not be stored in the cloud (i.e., at the cloud provider in question), but maintained by the cloud consumer or trusted key management provider. Key management and key usage shall be separated duties."
+ },
+ {
+   "domain": "Governance and Risk Management\nBaseline Requirements",
+   "id": "GRM-01",
+   "description": "Baseline security requirements shall be established for developed or acquired, organizationally-owned or managed, physical or virtual, applications and infrastructure system and network components that comply with applicable legal, statutory, and regulatory compliance obligations. Deviations from standard baseline configurations must be authorized following change management policies and procedures prior to deployment, provisioning, or use. Compliance with security baseline requirements must be reassessed at least annually unless an alternate frequency has been established and authorized based on business needs."
+ },
+ {
+   "domain": "Governance and Risk Management\nData Focus Risk Assessments",
+   "id": "GRM-02",
+   "description": "Risk assessments associated with data governance requirements shall be conducted at planned intervals and shall consider the following:\n  Awareness of where sensitive data is stored and transmitted across applications, databases, servers, and network infrastructure\n  Compliance with defined retention periods and end-of-life disposal requirements\n  Data classification and protection from unauthorized use, access, loss, destruction, and falsification"
+ },
+ {
+   "domain": "Governance and Risk Management\nManagement Oversight",
+   "id": "GRM-03",
+   "description": "Managers are responsible for maintaining awareness of, and complying with, security policies, procedures, and standards that are relevant to their area of responsibility."
+ },
+ {
+   "domain": "Governance and Risk Management\nManagement Program",
+   "id": "GRM-04",
+   "description": "An Information Security Management Program (ISMP) shall be developed, documented, approved, and implemented that includes administrative, technical, and physical safeguards to protect assets and data from loss, misuse, unauthorized access, disclosure, alteration, and destruction. The security program shall include, but not be limited to, the following areas insofar as they relate to the characteristics of the business:\n  Risk management\n  Security policy\n  Organization of information security\n  Asset management\n  Human resources security\n  Physical and environmental security\n  Communications and operations management\n  Access control\n  Information systems acquisition, development, and maintenance"
+ },
+ {
+   "domain": "Governance and Risk Management\nManagement Support/Involvement",
+   "id": "GRM-05",
+   "description": "Executive and line management shall take formal action to support information security through clearly-documented direction and commitment, and shall ensure the action has been assigned."
+ },
+ {
+   "domain": "Governance and Risk Management\nPolicy",
+   "id": "GRM-06",
+   "description": "Information security policies and procedures shall be established and made readily available for review by all impacted personnel and external business relationships. Information security policies must be authorized by the organization's business leadership (or other accountable business role or function) and supported by a strategic business plan and an information security management program inclusive of defined information security roles and responsibilities for business leadership."
+ },
+ {
+   "domain": "Governance and Risk Management\nPolicy Enforcement",
+   "id": "GRM-07",
+   "description": "A formal disciplinary or sanction policy shall be established for employees who have violated security policies and procedures. Employees shall be made aware of what action might be taken in the event of a violation, and disciplinary measures must be stated in the policies and procedures."
+ },
+ {
+   "domain": "Governance and Risk Management\nPolicy Impact on Risk Assessments",
+   "id": "GRM-08",
+   "description": "Risk assessment results shall include updates to security policies, procedures, standards, and controls to ensure that they remain relevant and effective."
+ },
+ {
+   "domain": "Governance and Risk Management\nPolicy Reviews",
+   "id": "GRM-09",
+   "description": "The organization's business leadership (or other accountable business role or function) shall review the information security policy at planned intervals or as a result of changes to the organization to ensure its continuing alignment with the security strategy, effectiveness, accuracy, relevance, and applicability to legal, statutory, or regulatory compliance obligations."
+ },
+ {
+   "domain": "Governance and Risk Management\nRisk Assessments",
+   "id": "GRM-10",
+   "description": "Aligned with the enterprise-wide framework, formal risk assessments shall be performed at least annually or at planned intervals, (and in conjunction with any changes to information systems) to determine the likelihood and impact of all identified risks using qualitative and quantitative methods. The likelihood and impact associated with inherent and residual risk shall be determined independently, considering all risk categories (e.g., audit results, threat and vulnerability analysis, and regulatory compliance)."
+ },
+ {
+   "domain": "Governance and Risk Management\nRisk Management Framework",
+   "id": "GRM-11",
+   "description": "Risks shall be mitigated to an acceptable level. Acceptance levels based on risk criteria shall be established and documented in accordance with reasonable resolution time frames and stakeholder approval."
+ },
+ {
+   "domain": "Human Resources\nAsset Returns",
+   "id": "HRS-01",
+   "description": "Upon termination of workforce personnel and/or expiration of external business relationships, all organizationally-owned assets shall be returned within an established period."
+ },
+ {
+   "domain": "Human Resources\nBackground Screening",
+   "id": "HRS-02",
+   "description": "Pursuant to local laws, regulations, ethics, and contractual constraints, all employment candidates, contractors, and third parties shall be subject to background verification proportional to the data classification to be accessed, the business requirements, and acceptable risk."
+ },
+ {
+   "domain": "Human Resources\nEmployment Agreements",
+   "id": "HRS-03",
+   "description": "Employment agreements shall incorporate provisions and/or terms for adherence to established information governance and security policies and must be signed by newly hired or on-boarded workforce personnel (e.g., full or part-time employee or contingent staff) prior to granting workforce personnel user access to corporate facilities, resources, and assets."
+ },
+ {
+   "domain": "Human Resources\nEmployment Termination",
+   "id": "HRS-04",
+   "description": "Roles and responsibilities for performing employment termination or change in employment procedures shall be assigned, documented, and communicated."
+ },
+ {
+   "domain": "Human Resources\nMobile Device Management",
+   "id": "HRS-05",
+   "description": "Policies and procedures shall be established, and supporting business processes and technical measures implemented, to manage business risks associated with permitting mobile device access to corporate resources and may require the implementation of higher assurance compensating controls and acceptable-use policies and procedures (e.g., mandated security training, stronger identity, entitlement and access controls, and device monitoring)."
+ },
+ {
+   "domain": "Human Resources\nNon-Disclosure Agreements",
+   "id": "HRS-06",
+   "description": "Requirements for non-disclosure or confidentiality agreements reflecting the organization's needs for the protection of data and operational details shall be identified, documented, and reviewed at planned intervals."
+ },
+ {
+   "domain": "Human Resources\nRoles / Responsibilities",
+   "id": "HRS-07",
+   "description": "Roles and responsibilities of contractors, employees, and third-party users shall be documented as they relate to information assets and security."
+ },
+ {
+   "domain": "Human Resources\nTechnology Acceptable Use",
+   "id": "HRS-08",
+   "description": "Policies and procedures shall be established, and supporting business processes and technical measures implemented, for defining allowances and conditions for permitting usage of organizationally-owned or managed user end-point devices (e.g., issued workstations, laptops, and mobile devices) and IT infrastructure network and systems components. Additionally, defining allowances and conditions to permit usage of personal mobile devices and associated applications with access to corporate resources (i.e., BYOD) shall be considered and incorporated as appropriate."
+ },
+ {
+   "domain": "Human Resources\nTraining / Awareness",
+   "id": "HRS-09",
+   "description": "A security awareness training program shall be established for all contractors, third-party users, and employees of the organization and mandated when appropriate. All individuals with access to organizational data shall receive appropriate awareness training and regular updates in organizational procedures, processes, and policies relating to their professional function relative to the organization."
+ },
+ {
+   "domain": "Human Resources\nUser Responsibility",
+   "id": "HRS-10",
+   "description": "All personnel shall be made aware of their roles and responsibilities for:\n  Maintaining awareness and compliance with established policies and procedures and applicable legal, statutory, or regulatory compliance obligations.\n  Maintaining a safe and secure working environment"
+ },
+ {
+   "domain": "Human Resources\nWorkspace",
+   "id": "HRS-11",
+   "description": "Policies and procedures shall be established to require that unattended workspaces do not have openly visible (e.g., on a desktop) sensitive documents and user computing sessions are disabled after an established period of inactivity."
+ },
+ {
+   "domain": "Identity & Access Management\nAudit Tools Access",
+   "id": "IAM-01",
+   "description": "Access to, and use of, audit tools that interact with the organization's information systems shall be appropriately segregated and access restricted to prevent inappropriate disclosure and tampering of log data."
+ },
+ {
+   "domain": "Identity & Access Management\nCredential Lifecycle / Provision Management",
+   "id": "IAM-02",
+   "description": "User access policies and procedures shall be established, and supporting business processes and technical measures implemented, for ensuring appropriate identity, entitlement, and access management for all internal corporate and customer (tenant) users with access to data and organizationally-owned or managed (physical and virtual) application interfaces and infrastructure network and systems components. These policies, procedures, processes, and measures must incorporate the following:\n  Procedures, supporting roles, and responsibilities for provisioning and de-provisioning user account entitlements following the rule of least privilege based on job function (e.g., internal employee and contingent staff personnel changes, customer-controlled access, suppliers' business relationships, or other third-party business relationships)\n  Business case considerations for higher levels of assurance and multi-factor authentication secrets (e.g., management interfaces, key generation, remote access, segregation of duties, emergency access, large-scale provisioning or geographically-distributed deployments, and personnel redundancy for critical systems)\n  Access segmentation to sessions and data in multi-tenant architectures by any third party (e.g., provider and/or other customer (tenant))\n  Identity trust verification and service-to-service application (API) and information processing interoperability (e.g., SSO and federation)\n  Account credential lifecycle management from instantiation through revocation\n  Account credential and/or identity store minimization or re-use when feasible\n  Authentication, authorization, and accounting (AAA) rules for access to data and sessions (e.g., encryption and strong/multi-factor, expireable, non-shared authentication secrets)\n  Permissions and supporting capabilities for customer (tenant) controls over authentication, authorization, and accounting (AAA) rules for access to data and sessions\n  Adherence to applicable legal, statutory, or regulatory compliance requirements"
+ },
+ {
+   "domain": "Identity & Access Management\nDiagnostic / Configuration Ports Access",
+   "id": "IAM-03",
+   "description": "User access to diagnostic and configuration ports shall be restricted to authorized individuals and applications."
+ },
+ {
+   "domain": "Identity & Access Management\nPolicies and Procedures",
+   "id": "IAM-04",
+   "description": "Policies and procedures shall be established to store and manage identity information about every person who accesses IT infrastructure and to determine their level of access. Policies shall also be developed to control access to network resources based on user identity."
+ },
+ {
+   "domain": "Identity & Access Management\nSegregation of Duties",
+   "id": "IAM-05",
+   "description": "User access policies and procedures shall be established, and supporting business processes and technical measures implemented, for restricting user access as per defined segregation of duties to address business risks associated with a user-role conflict of interest."
+ },
+ {
+   "domain": "Identity & Access Management\nSource Code Access Restriction",
+   "id": "IAM-06",
+   "description": "Access to the organization's own developed applications, program, or object source code, or any other form of intellectual property (IP), and use of proprietary software shall be appropriately restricted following the rule of least privilege based on job function as per established user access policies and procedures."
+ },
+ {
+   "domain": "Identity & Access Management\nThird Party Access",
+   "id": "IAM-07",
+   "description": "The identification, assessment, and prioritization of risks posed by business processes requiring third-party access to the organization's information systems and data shall be followed by coordinated application of resources to minimize, monitor, and measure likelihood and impact of unauthorized or inappropriate access. Compensating controls derived from the risk analysis shall be implemented prior to provisioning access."
+ },
+ {
+   "domain": "Identity & Access Management\nTrusted Sources",
+   "id": "IAM-08",
+   "description": "Policies and procedures are established for permissible storage and access of identities used for authentication to ensure identities are only accessible based on rules of least privilege and replication limitation only to users explicitly defined as business necessary."
+ },
+ {
+   "domain": "Identity & Access Management\nUser Access Authorization",
+   "id": "IAM-09",
+   "description": "Provisioning user access (e.g., employees, contractors, customers (tenants), business partners, and/or supplier relationships) to data and organizationally-owned or managed (physical and virtual) applications, infrastructure systems, and network components shall be authorized by the organization's management prior to access being granted and appropriately restricted as per established policies and procedures. Upon request, provider shall inform customer (tenant) of this user access, especially if customer (tenant) data is used as part the service and/or customer (tenant) has some shared responsibility over implementation of control."
+ },
+ {
+   "domain": "Identity & Access Management\nUser Access Reviews",
+   "id": "IAM-10",
+   "description": "User access shall be authorized and revalidated for entitlement appropriateness, at planned intervals, by the organization's business leadership or other accountable business role or function supported by evidence to demonstrate the organization is adhering to the rule of least privilege based on job function. For identified access violations, remediation must follow established user access policies and procedures."
+ },
+ {
+   "domain": "Identity & Access Management\nUser Access Revocation",
+   "id": "IAM-11",
+   "description": "Timely de-provisioning (revocation or modification) of user access to data and organizationally-owned or managed (physical and virtual) applications, infrastructure systems, and network components, shall be implemented as per established policies and procedures and based on user's change in status (e.g., termination of employment or other business relationship, job change, or transfer). Upon request, provider shall inform customer (tenant) of these changes, especially if customer (tenant) data is used as part the service and/or customer (tenant) has some shared responsibility over implementation of control."
+ },
+ {
+   "domain": "Identity & Access Management\nUser ID Credentials",
+   "id": "IAM-12",
+   "description": "Internal corporate or customer (tenant) user account credentials shall be restricted as per the following, ensuring appropriate identity, entitlement, and access management and in accordance with established policies and procedures:\n  Identity trust verification and service-to-service application (API) and information processing interoperability (e.g., SSO and Federation)\n  Account credential lifecycle management from instantiation through revocation\n  Account credential and/or identity store minimization or re-use when feasible\n  Adherence to industry acceptable and/or regulatory compliant authentication, authorization, and accounting (AAA) rules (e.g., strong/multi-factor, expireable, non-shared authentication secrets)"
+ },
+ {
+   "domain": "Identity & Access Management\nUtility Programs Access",
+   "id": "IAM-13",
+   "description": "Utility programs capable of potentially overriding system, object, network, virtual machine, and application controls shall be restricted."
+ },
+ {
+   "domain": "Infrastructure & Virtualization Security\nAudit Logging / Intrusion Detection",
+   "id": "IVS-01",
+   "description": "Higher levels of assurance are required for protection, retention, and lifecycle management of audit logs, adhering to applicable legal, statutory or regulatory compliance obligations and providing unique user access accountability to detect potentially suspicious network behaviors and/or file integrity anomalies, and to support forensic investigative capabilities in the event of a security breach."
+ },
+ {
+   "domain": "Infrastructure & Virtualization Security\nChange Detection",
+   "id": "IVS-02",
+   "description": "The provider shall ensure the integrity of all virtual machine images at all times. Any changes made to virtual machine images must be logged and an alert raised regardless of their running state (e.g., dormant, off, or running). The results of a change or move of an image and the subsequent validation of the image's integrity must be immediately available to customers through electronic methods (e.g., portals or alerts)."
+ },
+ {
+   "domain": "Infrastructure & Virtualization Security\nClock Synchronization",
+   "id": "IVS-03",
+   "description": "A reliable and mutually agreed upon external time source shall be used to synchronize the system clocks of all relevant information processing systems to facilitate tracing and reconstitution of activity timelines."
+ },
+ {
+   "domain": "Infrastructure & Virtualization Security\nInformation System Documentation",
+   "id": "IVS-04",
+   "description": "The availability, quality, and adequate capacity and resources shall be planned, prepared, and measured to deliver the required system performance in accordance with legal, statutory, and regulatory compliance obligations. Projections of future capacity requirements shall be made to mitigate the risk of system overload."
+ },
+ {
+   "domain": "Infrastructure & Virtualization Security\nVulnerability Management",
+   "id": "IVS-05",
+   "description": "Implementers shall ensure that the security vulnerability assessment tools or services accommodate the virtualization technologies used (e.g., virtualization aware)."
+ },
+ {
+   "domain": "Infrastructure & Virtualization Security\nNetwork Security",
+   "id": "IVS-06",
+   "description": "Network environments and virtual instances shall be designed and configured to restrict and monitor traffic between trusted and untrusted connections. These configurations shall be reviewed at least annually, and supported by a documented justification for use for all allowed services, protocols, ports, and by compensating controls."
+ },
+ {
+   "domain": "Infrastructure & Virtualization Security\nOS Hardening and Base Controls",
+   "id": "IVS-07",
+   "description": "Each operating system shall be hardened to provide only necessary ports, protocols, and services to meet business needs and have in place supporting technical controls such as: antivirus, file integrity monitoring, and logging as part of their baseline operating build standard or template."
+ },
+ {
+   "domain": "Infrastructure & Virtualization Security\nProduction / Non-Production Environments",
+   "id": "IVS-08",
+   "description": "Production and non-production environments shall be separated to prevent unauthorized access or changes to information assets. Separation of the environments may include: stateful inspection firewalls, domain/realm authentication sources, and clear segregation of duties for personnel accessing these environments as part of their job duties."
+ },
+ {
+   "domain": "Infrastructure & Virtualization Security\nSegmentation",
+   "id": "IVS-09",
+   "description": "Multi-tenant organizationally-owned or managed (physical and virtual) applications, and infrastructure system and network components, shall be designed, developed, deployed, and configured such that provider and customer (tenant) user access is appropriately segmented from other tenant users, based on the following considerations:\n  Established policies and procedures\n  Isolation of business critical assets and/or sensitive user data, and sessions that mandate stronger internal controls and high levels of assurance\n  Compliance with legal, statutory, and regulatory compliance obligations"
+ },
+ {
+   "domain": "Infrastructure & Virtualization Security\nVM Security - Data Protection",
+   "id": "IVS-10",
+   "description": "Secured and encrypted communication channels shall be used when migrating physical servers, applications, or data to virtualized servers and, where possible, shall use a network segregated from production-level networks for such migrations."
+ },
+ {
+   "domain": "Infrastructure & Virtualization Security\nHypervisor Hardening",
+   "id": "IVS-11",
+   "description": "Access to all hypervisor management functions or administrative consoles for systems hosting virtualized systems shall be restricted to personnel based upon the principle of least privilege and supported through technical controls (e.g., two-factor authentication, audit trails, IP address filtering, firewalls, and TLS encapsulated communications to the administrative consoles)."
+ },
+ {
+   "domain": "Infrastructure & Virtualization Security\nWireless Security",
+   "id": "IVS-12",
+   "description": "Policies and procedures shall be established, and supporting business processes and technical measures implemented, to protect wireless network environments, including the following:\n  Perimeter firewalls implemented and configured to restrict unauthorized traffic\n  Security settings enabled with strong encryption for authentication and transmission, replacing vendor default settings (e.g., encryption keys, passwords, and SNMP community strings)\n  User access to wireless network devices restricted to authorized personnel\n  The capability to detect the presence of unauthorized (rogue) wireless network devices for a timely disconnect from the network"
+ },
+ {
+   "domain": "Infrastructure & Virtualization Security\nNetwork Architecture",
+   "id": "IVS-13",
+   "description": "Network architecture diagrams shall clearly identify high-risk environments and data flows that may have legal compliance impacts. Technical measures shall be implemented and shall apply defense-in-depth techniques (e.g., deep packet analysis, traffic throttling, and black-holing) for detection and timely response to network-based attacks associated with anomalous ingress or egress traffic patterns (e.g., MAC spoofing and ARP poisoning attacks) and/or distributed denial-of-service (DDoS) attacks."
+ },
+ {
+   "domain": "Interoperability & Portability\nAPIs",
+   "id": "IPY-01",
+   "description": "The provider shall use open and published APIs to ensure support for interoperability between components and to facilitate migrating applications."
+ },
+ {
+   "domain": "Interoperability & Portability\nData Request",
+   "id": "IPY-02",
+   "description": "All structured and unstructured data shall be available to the customer and provided to them upon request in an industry-standard format (e.g., .doc, .xls, .pdf, logs, and flat files)."
+ },
+ {
+   "domain": "Interoperability & Portability\nPolicy & Legal",
+   "id": "IPY-03",
+   "description": "Policies, procedures, and mutually-agreed upon provisions and/or terms shall be established to satisfy customer (tenant) requirements for service-to-service application (API) and information processing interoperability, and portability for application development and information exchange, usage, and integrity persistence."
+ },
+ {
+   "domain": "Interoperability & Portability\nStandardized Network Protocols",
+   "id": "IPY-04",
+   "description": "The provider shall use secure (e.g., non-clear text and authenticated) standardized network protocols for the import and export of data and to manage the service, and shall make available a document to consumers (tenants) detailing the relevant interoperability and portability standards that are involved."
+ },
+ {
+   "domain": "Interoperability & Portability\nVirtualization",
+   "id": "IPY-05",
+   "description": "The provider shall use an industry-recognized virtualization platform and standard virtualization formats (e.g., OVF) to help ensure interoperability, and shall have documented custom changes made to any hypervisor in use and all solution-specific virtualization hooks available for customer review."
+ },
+ {
+   "domain": "Mobile Security\nAnti-Malware",
+   "id": "MOS-01",
+   "description": "Anti-malware awareness training, specific to mobile devices, shall be included in the provider's information security awareness training."
+ },
+ {
+   "domain": "Mobile Security\nApplication Stores",
+   "id": "MOS-02",
+   "description": "A documented list of approved application stores has been defined as acceptable for mobile devices accessing or storing provider managed data."
+ },
+ {
+   "domain": "Mobile Security\nApproved Applications",
+   "id": "MOS-03",
+   "description": "The company shall have a documented policy prohibiting the installation of non-approved applications or approved applications not obtained through a pre-identified application store."
+ },
+ {
+   "domain": "Mobile Security\nApproved Software for BYOD",
+   "id": "MOS-04",
+   "description": "The BYOD policy and supporting awareness training clearly states the approved applications, application stores, and application extensions and plugins that may be used for BYOD usage."
+ },
+ {
+   "domain": "Mobile Security\nAwareness and Training",
+   "id": "MOS-05",
+   "description": "The provider shall have a documented mobile device policy that includes a documented definition for mobile devices and the acceptable usage and requirements for all mobile devices. The provider shall post and communicate the policy and requirements through the company's security awareness and training program."
+ },
+ {
+   "domain": "Mobile Security\nCloud Based Services",
+   "id": "MOS-06",
+   "description": "All cloud-based services used by the company's mobile devices or BYOD shall be pre-approved for usage and the storage of company business data."
+ },
+ {
+   "domain": "Mobile Security\nCompatibility",
+   "id": "MOS-07",
+   "description": "The company shall have a documented application validation process to test for mobile device, operating system, and application compatibility issues."
+ },
+ {
+   "domain": "Mobile Security\nDevice Eligibility",
+   "id": "MOS-08",
+   "description": "The BYOD policy shall define the device and eligibility requirements to allow for BYOD usage."
+ },
+ {
+   "domain": "Mobile Security\nDevice Inventory",
+   "id": "MOS-09",
+   "description": "An inventory of all mobile devices used to store and access company data shall be kept and maintained. All changes to the status of these devices (i.e., operating system and patch levels, lost or decommissioned status, and to whom the device is assigned or approved for usage (BYOD)) will be included for each device in the inventory."
+ },
+ {
+   "domain": "Mobile Security\nDevice Management",
+   "id": "MOS-10",
+   "description": "A centralized, mobile device management solution shall be deployed to all mobile devices permitted to store, transmit, or process customer data."
+ },
+ {
+   "domain": "Mobile Security\nEncryption",
+   "id": "MOS-11",
+   "description": "The mobile device policy shall require the use of encryption either for the entire device or for data identified as sensitive on all mobile devices, and shall be enforced through technology controls."
+ },
+ {
+   "domain": "Mobile Security\nJailbreaking and Rooting",
+   "id": "MOS-12",
+   "description": "The mobile device policy shall prohibit the circumvention of built-in security controls on mobile devices (e.g., jailbreaking or rooting) and shall enforce the prohibition through detective and preventative controls on the device or through a centralized device management system (e.g., mobile device management)."
+ },
+ {
+   "domain": "Mobile Security\nLegal",
+   "id": "MOS-13",
+   "description": "The BYOD policy includes clarifying language for the expectation of privacy, requirements for litigation, e-discovery, and legal holds. The BYOD policy shall clearly state the expectations regarding the loss of non-company data in the case that a wipe of the device is required."
+ },
+ {
+   "domain": "Mobile Security\nLockout Screen",
+   "id": "MOS-14",
+   "description": "BYOD and/or company-owned devices are configured to require an automatic lockout screen, and the requirement shall be enforced through technical controls."
+ },
+ {
+   "domain": "Mobile Security\nOperating Systems",
+   "id": "MOS-15",
+   "description": "Changes to mobile device operating systems, patch levels, and/or applications shall be managed through the company's change management processes."
+ },
+ {
+   "domain": "Mobile Security\nPasswords",
+   "id": "MOS-16",
+   "description": "Password policies, applicable to mobile devices, shall be documented and enforced through technical controls on all company devices or devices approved for BYOD usage, and shall prohibit the changing of password/PIN lengths and authentication requirements."
+ },
+ {
+   "domain": "Mobile Security\nPolicy",
+   "id": "MOS-17",
+   "description": "The mobile device policy shall require the BYOD user to perform backups of data, prohibit the usage of unapproved application stores, and require the use of anti-malware software (where supported)."
+ },
+ {
+   "domain": "Mobile Security\nRemote Wipe",
+   "id": "MOS-18",
+   "description": "All mobile devices permitted for use through the company BYOD program or a company-assigned mobile device shall allow for remote wipe by the company's corporate IT or shall have all company-provided data wiped by the company's corporate IT."
+ },
+ {
+   "domain": "Mobile Security\nSecurity Patches",
+   "id": "MOS-19",
+   "description": "Mobile devices connecting to corporate networks, or storing and accessing company information, shall allow for remote software version/patch validation. All mobile devices shall have the latest available security-related patches installed upon general release by the device manufacturer or carrier and authorized IT personnel shall be able to perform these updates remotely."
+ },
+ {
+   "domain": "Mobile Security\nUsers",
+   "id": "MOS-20",
+   "description": "The BYOD policy shall clarify the systems and servers allowed for use or access on a BYOD-enabled device."
+ },
+ {
+   "domain": "Security Incident Management, E-Discovery, & Cloud Forensics\nContact / Authority Maintenance",
+   "id": "SEF-01",
+   "description": "Points of contact for applicable regulation authorities, national and local law enforcement, and other legal jurisdictional authorities shall be maintained and regularly updated (e.g., change in impacted-scope and/or a change in any compliance obligation) to ensure direct compliance liaisons have been established and to be prepared for a forensic investigation requiring rapid engagement with law enforcement."
+ },
+ {
+   "domain": "Security Incident Management, E-Discovery, & Cloud Forensics\nIncident Management",
+   "id": "SEF-02",
+   "description": "Policies and procedures shall be established, and supporting business processes and technical measures implemented, to triage security-related events and ensure timely and thorough incident management, as per established IT service management policies and procedures."
+ },
+ {
+   "domain": "Security Incident Management, E-Discovery, & Cloud Forensics\nIncident Reporting",
+   "id": "SEF-03",
+   "description": "Workforce personnel and external business relationships shall be informed of their responsibilities and, if required, shall consent and/or contractually agree to report all information security events in a timely manner. Information security events shall be reported through predefined communications channels in a timely manner adhering to applicable legal, statutory, or regulatory compliance obligations."
+ },
+ {
+   "domain": "Security Incident Management, E-Discovery, & Cloud Forensics\nIncident Response Legal Preparation",
+   "id": "SEF-04",
+   "description": "Proper forensic procedures, including chain of custody, are required for the presentation of evidence to support potential legal action subject to the relevant jurisdiction after an information security incident. Upon notification, customers and/or other external business partners impacted by a security breach shall be given the opportunity to participate as is legally permissible in the forensic investigation."
+ },
+ {
+   "domain": "Security Incident Management, E-Discovery, & Cloud Forensics\nIncident Response Metrics",
+   "id": "SEF-05",
+   "description": "Mechanisms shall be put in place to monitor and quantify the types, volumes, and costs of information security incidents."
+ },
+ {
+   "domain": "Supply Chain Management, Transparency, and Accountability\nData Quality and Integrity",
+   "id": "STA-01",
+   "description": "Providers shall inspect, account for, and work with their cloud supply-chain partners to correct data quality errors and associated risks. Providers shall design and implement controls to mitigate and contain data security risks through proper separation of duties, role-based access, and least-privilege access for all personnel within their supply chain."
+ },
+ {
+   "domain": "Supply Chain Management, Transparency, and Accountability\nIncident Reporting",
+   "id": "STA-02",
+   "description": "The provider shall make security incident information available to all affected customers and providers periodically through electronic methods (e.g., portals)."
+ },
+ {
+   "domain": "Supply Chain Management, Transparency, and Accountability\nNetwork / Infrastructure Services",
+   "id": "STA-03",
+   "description": "Business-critical or customer (tenant) impacting (physical and virtual) application and system-system interface (API) designs and configurations, and infrastructure network and systems components, shall be designed, developed, and deployed in accordance with mutually agreed-upon service and capacity-level expectations, as well as IT governance and service management policies and procedures."
+ },
+ {
+   "domain": "Supply Chain Management, Transparency, and Accountability\nProvider Internal Assessments",
+   "id": "STA-04",
+   "description": "The provider shall perform annual internal assessments of conformance to, and effectiveness of, its policies, procedures, and supporting measures and metrics."
+ },
+ {
+   "domain": "Supply Chain Management, Transparency, and Accountability\nSupply Chain Agreements",
+   "id": "STA-05",
+   "description": "Supply chain agreements (e.g., SLAs) between providers and customers (tenants) shall incorporate at least the following mutually-agreed upon provisions and/or terms:\n  Scope of business relationship and services offered (e.g., customer (tenant) data acquisition, exchange and usage, feature sets and functionality, personnel and infrastructure network and systems components for service delivery and support, roles and responsibilities of provider and customer (tenant) and any subcontracted or outsourced business relationships, physical geographical location of hosted services, and any known regulatory compliance considerations)\n  Information security requirements, provider and customer (tenant) primary points of contact for the duration of the business relationship, and references to detailed supporting and relevant business processes and technical measures implemented to enable effectively governance, risk management, assurance and legal, statutory and regulatory compliance obligations by all impacted business relationships\n  Notification and/or pre-authorization of any changes controlled by the provider with customer (tenant) impacts\n  Timely notification of a security incident (or confirmed breach) to all customers (tenants) and other business relationships impacted (i.e., up- and down-stream impacted supply chain)\n  Assessment and independent verification of compliance with agreement provisions and/or terms (e.g., industry-acceptable certification, attestation audit report, or equivalent forms of assurance) without posing an unacceptable business risk of exposure to the organization being assessed\n  Expiration of the business relationship and treatment of customer (tenant) data impacted\n  Customer (tenant) service-to-service application (API) and data interoperability and portability requirements for application development and information exchange, usage, and integrity persistence"
+ },
+ {
+   "domain": "Supply Chain Management, Transparency, and Accountability\nSupply Chain Governance Reviews",
+   "id": "STA-06",
+   "description": "Providers shall review the risk management and governance processes of their partners so that practices are consistent and aligned to account for risks inherited from other members of that partner's cloud supply chain."
+ },
+ {
+   "domain": "Supply Chain Management, Transparency, and Accountability\nSupply Chain Metrics",
+   "id": "STA-07",
+   "description": "Policies and procedures shall be implemented to ensure the consistent review of service agreements (e.g., SLAs) between providers and customers (tenants) across the relevant supply chain (upstream/downstream). Reviews shall be performed at least annually and identify any non-conformance to established agreements. The reviews should result in actions to address service-level conflicts or inconsistencies resulting from disparate supplier relationships."
+ },
+ {
+   "domain": "Supply Chain Management, Transparency, and Accountability\nThird Party Assessment",
+   "id": "STA-08",
+   "description": "Providers shall assure reasonable information security across their information supply chain by performing an annual review. The review shall include all partners/third party-providers upon which their information supply chain depends on."
+ },
+ {
+   "domain": "Supply Chain Management, Transparency, and Accountability\nThird Party Audits",
+   "id": "STA-09",
+   "description": "Third-party service providers shall demonstrate compliance with information security and confidentiality, access control, service definitions, and delivery level agreements included in third-party contracts. Third-party reports, records, and services shall undergo audit and review at least annually to govern and maintain compliance with the service delivery agreements."
+ },
+ {
+   "domain": "Threat and Vulnerability Management\nAnti-Virus / Malicious Software",
+   "id": "TVM-01",
+   "description": "Policies and procedures shall be established, and supporting business processes and technical measures implemented, to prevent the execution of malware on organizationally-owned or managed user end-point devices (i.e., issued workstations, laptops, and mobile devices) and IT infrastructure network and systems components."
+ },
+ {
+   "domain": "Threat and Vulnerability Management\nVulnerability / Patch Management",
+   "id": "TVM-02",
+   "description": "Policies and procedures shall be established, and supporting processes and technical measures implemented, for timely detection of vulnerabilities within organizationally-owned or managed applications, infrastructure network and system components (e.g., network vulnerability assessment, penetration testing) to ensure the efficiency of implemented security controls. A risk-based model for prioritizing remediation of identified vulnerabilities shall be used. Changes shall be managed through a change management process for all vendor-supplied patches, configuration changes, or changes to the organization's internally developed software. Upon request, the provider informs customer (tenant) of policies and procedures and identified weaknesses especially if customer (tenant) data is used as part the service and/or customer (tenant) has some shared responsibility over implementation of control."
+ },
+ {
+   "domain": "Threat and Vulnerability Management\nMobile Code",
+   "id": "TVM-03",
+   "description": "Policies and procedures shall be established, and supporting business processes and technical measures implemented, to prevent the execution of unauthorized mobile code, defined as software transferred between systems over a trusted or untrusted network and executed on a local system without explicit installation or execution by the recipient, on organizationally-owned or managed user end-point devices (e.g., issued workstations, laptops, and mobile devices) and IT infrastructure network and systems components."
+ }
+]
+}

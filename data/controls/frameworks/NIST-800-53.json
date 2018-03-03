@@ -1,0 +1,682 @@
+{
+"frameworkname":"NIST 800-53 Revision 4",
+"description":"",
+"url":"https://nvd.nist.gov/800-53",
+"controls":[
+ {
+   "Class": "Technical",
+   "Family": "Access Control",
+   "id": "AC-1",
+   "Title": "Access Control Policy and Procedures",
+   "Priority": "P1",
+   "description": "The organization develops, disseminates, and reviews/updates [ Assignment: organization-defined frequency ]: A formal, documented access control policy that addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and Formal, documented procedures to facilitate the implementation of the access control policy and associated access controls. ",
+   "SupplementalGuidance": "This control is intended to produce the policy and procedures that are required for the effective implementation of selected security controls and control enhancements in the access control family. The policy and procedures are consistent with applicable federal laws, Executive Orders, directives, policies, regulations, standards, and guidance. Existing organizational policies and procedures may make the need for additional specific policies and procedures unnecessary. The access control policy can be included as part of the general information security policy for the organization. Access control procedures can be developed for the security program in general and for a particular information system, when required. The organizational risk management strategy is a key factor in the development of the access control policy. Related control: PM-9. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Access Control",
+   "id": "AC-2",
+   "Title": "Account Management",
+   "Priority": "P1",
+   "description": "The organization manages information system accounts, including: Identifying account types (i.e., individual, group, system, application, guest/anonymous, and temporary); Establishing conditions for group membership; Identifying authorized users of the information system and specifying access privileges; Requiring appropriate approvals for requests to establish accounts; Establishing, activating, modifying, disabling, and removing accounts; Specifically authorizing and monitoring the use of guest/anonymous and temporary accounts; Notifying account managers when temporary accounts are no longer required and when information system users are terminated, transferred, or information system usage or need-to-know/need-to-share changes; Deactivating: (i) temporary accounts that are no longer required; and (ii) accounts of terminated or transferred users; Granting access to the system based on: (i) a valid access authorization; (ii) intended system usage; and (iii) other attributes as required by the organization or associated missions/business functions; and Reviewing accounts [ Assignment: organization-defined frequency ]. ",
+   "SupplementalGuidance": "The identification of authorized users of the information system and the specification of access privileges is consistent with the requirements in other security controls in the security plan. Users requiring administrative privileges on information system accounts receive additional scrutiny by organizational officials responsible for approving such accounts and privileged access. Related controls: AC-3, AC-4, AC-5, AC-6, AC-10, AC-17, AC-19, AC-20, AU-9, IA-4, IA-5, CM-5, CM-6, MA-3, MA-4, MA-5, SA-7, SC-13, SI-9. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Access Control",
+   "id": "AC-3",
+   "Title": "Access Enforcement",
+   "Priority": "P1",
+   "description": "The information system enforces approved authorizations for logical access to the system in accordance with applicable policy. ",
+   "SupplementalGuidance": "Access control policies (e.g., identity-based policies, role-based policies, attribute-based policies) and access enforcement mechanisms (e.g., access control lists, access control matrices, cryptography) are employed by organizations to control access between users (or processes acting on behalf of users) and objects (e.g., devices, files, records, processes, programs, domains) in the information system. In addition to enforcing authorized access at the information-system level, access enforcement mechanisms are employed at the application level, when necessary, to provide increased information security for the organization. Consideration is given to the implementation of an audited, explicit override of automated mechanisms in the event of emergencies or other serious events. If encryption of stored information is employed as an access enforcement mechanism, the cryptography used is FIPS 140-2 (as amended) compliant. For classified information, the cryptography used is largely dependent on the classification level of the information and the clearances of the individuals having access to the information. Mechanisms implemented by AC-3 are configured to enforce authorizations determined by other security controls. Related controls: AC-2, AC-4, AC-5, AC-6, AC-16, AC-17, AC-18, AC-19, AC-20, AC-21, AC-22, AU-9, CM-5, CM-6, MA-3, MA-4, MA-5, SA-7, SC-13, SI-9. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Access Control",
+   "id": "AC-4",
+   "Title": "Information Flow Enforcement",
+   "Priority": "P1",
+   "description": "The information system enforces approved authorizations for controlling the flow of information within the system and between interconnected systems in accordance with applicable policy. ",
+   "SupplementalGuidance": "Information flow control regulates where information is allowed to travel within an information system and between information systems (as opposed to who is allowed to access the information) and without explicit regard to subsequent accesses to that information. A few examples of flow control restrictions include: keeping export controlled information from being transmitted in the clear to the Internet, blocking outside traffic that claims to be from within the organization, and not passing any web requests to the Internet that are not from the internal web proxy. Information flow control policies and enforcement mechanisms are commonly employed by organizations to control the flow of information between designated sources and destinations (e.g., networks, individuals, devices) within information systems and between interconnected systems. Flow control is based on the characteristics of the information and/or the information path. Specific examples of flow control enforcement can be found in boundary protection devices (e.g., proxies, gateways, guards, encrypted tunnels, firewalls, and routers) that employ rule sets or establish configuration settings that restrict information system services, provide a packet-filtering capability based on header information, or message-filtering capability based on content (e.g., using key word searches or document characteristics). Mechanisms implemented by AC-4 are configured to enforce authorizations determined by other security controls. Related controls: AC-17, AC-19, AC-21, CM-7, SA-8, SC-2, SC-5, SC-7, SC-18. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Access Control",
+   "id": "AC-5",
+   "Title": "Separation of Duties",
+   "Priority": "P1",
+   "description": "The organization: Separates duties of individuals as necessary, to prevent malevolent activity without collusion; Documents separation of duties; and Implements separation of duties through assigned information system access authorizations. ",
+   "SupplementalGuidance": "Examples of separation of duties include: (i) mission functions and distinct information system support functions are divided among different individuals/roles; (ii) different individuals perform information system support functions (e.g., system management, systems programming, configuration management, quality assurance and testing, network security); (iii) security personnel who administer access control functions do not administer audit functions; and (iv) different administrator accounts for different roles. Access authorizations defined in this control are implemented by control AC-3. Related controls: AC-3. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Access Control",
+   "id": "AC-6",
+   "Title": "Least Privilege",
+   "Priority": "P1",
+   "description": "The organization employs the concept of least privilege, allowing only authorized accesses for users (and processes acting on behalf of users) which are necessary to accomplish assigned tasks in accordance with organizational missions and business functions. ",
+   "SupplementalGuidance": "The access authorizations defined in this control are largely implemented by control AC-3. The organization employs the concept of least privilege for specific duties and information systems (including specific ports, protocols, and services) in accordance with risk assessments as necessary to adequately mitigate risk to organizational operations and assets, individuals, other organizations, and the Nation. Related controls: AC-2, AC-3, CM-7. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Access Control",
+   "id": "AC-7",
+   "Title": "Unsuccessful Login Attempts",
+   "Priority": "P2",
+   "description": "The information system: Enforces a limit of [ Assignment: organization-defined id ] consecutive invalid login attempts by a user during a [ Assignment: organization-defined time period ]; and Automatically [ Selection: locks the account/node for an [ Assignment: organization-defined time period ] ; locks the account/node until released by an administrator; delays next login prompt according to [ Assignment: organization-defined delay algorithm ]] when the maximum id of unsuccessful attempts is exceeded. The control applies regardless of whether the login occurs via a local or network connection. ",
+   "SupplementalGuidance": "Due to the potential for denial of service, automatic lockouts initiated by the information system are usually temporary and automatically release after a predetermined time period established by the organization. If a delay algorithm is selected, the organization may chose to employ different algorithms for different information system components based on the capabilities of those components. Response to unsuccessful login attempts may be implemented at both the operating system and the application levels. This control applies to all accesses other than those accesses explicitly identified and documented by the organization in AC-14. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Access Control",
+   "id": "AC-8",
+   "Title": "System Use Notification",
+   "Priority": "P1",
+   "description": "The information system: Displays an approved system use notification message or banner before granting access to the system that provides privacy and security notices consistent with applicable federal laws, Executive Orders, directives, policies, regulations, standards, and guidance and states that: (i) users are accessing a U.S. Government information system; (ii) system usage may be monitored, recorded, and subject to audit; (iii) unauthorized use of the system is prohibited and subject to criminal and civil penalties; and (iv) use of the system indicates consent to monitoring and recording; Retains the notification message or banner on the screen until users take explicit actions to log on to or further access the information system; and For publicly accessible systems: (i) displays the system use information when appropriate, before granting further access; (ii) displays references, if any, to monitoring, recording, or auditing that are consistent with privacy accommodations for such systems that generally prohibit those activities; and (iii) includes in the notice given to public users of the information system, a description of the authorized uses of the system. ",
+   "SupplementalGuidance": "System use notification messages can be implemented in the form of warning banners displayed when individuals log in to the information system. System use notification is intended only for information system access that includes an interactive login interface with a human user and is not intended to require notification when an interactive interface does not exist. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Access Control",
+   "id": "AC-9",
+   "Title": "Previous Logon (Access) Notification",
+   "Priority": "P0",
+   "description": "The information system notifies the user, upon successful logon (access), of the date and time of the last logon (access). ",
+   "SupplementalGuidance": "This control is intended to cover both traditional logons to information systems and general accesses to information systems that occur in other types of architectural configurations (e.g., service oriented architectures). "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Access Control",
+   "id": "AC-10",
+   "Title": "Concurrent Session Control",
+   "Priority": "P2",
+   "description": "The information system limits the id of concurrent sessions for each system account to [ Assignment: organization-defined id ]. ",
+   "SupplementalGuidance": "The organization may define the maximum id of concurrent sessions for an information system account globally, by account type, by account, or a combination. This control addresses concurrent sessions for a given information system account and does not address concurrent sessions by a single user via multiple system accounts. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Access Control",
+   "id": "AC-11",
+   "Title": "Session Lock",
+   "Priority": "P3",
+   "description": "The information system: Prevents further access to the system by initiating a session lock after [ Assignment: organization-defined time period ] of inactivity or upon receiving a request from a user; and Retains the session lock until the user reestablishes access using established identification and authentication procedures. ",
+   "SupplementalGuidance": "A session lock is a temporary action taken when a user stops work and moves away from the immediate physical vicinity of the information system but does not want to log out because of the temporary nature of the absence. The session lock is implemented at the point where session activity can be determined. This is typically at the operating system-level, but may be at the application-level. A session lock is not a substitute for logging out of the information system, for example, if the organization requires users to log out at the end of the workday. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Access Control",
+   "id": "AC-14",
+   "Title": "Permitted Actions Without Identification Or Authentication",
+   "Priority": "P1",
+   "description": "The organization: Identifies specific user actions that can be performed on the information system without identification or authentication; and Documents and provides supporting rationale in the security plan for the information system, user actions not requiring identification and authentication. ",
+   "SupplementalGuidance": "This control is intended for those specific instances where an organization determines that no identification and authentication is required; it is not, however, mandating that such instances exist in given information system. The organization may allow a limited id of user actions without identification and authentication (e.g., when individuals access public websites or other publicly accessible federal information systems such as http://www.usa.gov). Organizations also identify any actions that normally require identification or authentication but may under certain circumstances (e.g., emergencies), allow identification or authentication mechanisms to be bypassed. Such bypass may be, for example, via a software-readable physical switch that commands bypass of the login functionality and is protected from accidental or unmonitored use. This control does not apply to situations where identification and authentication have already occurred and are not being repeated, but rather to situations where identification and/or authentication have not yet occurred. Related control: CP-2, IA-2. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Access Control",
+   "id": "AC-16",
+   "Title": "Security Attributes",
+   "Priority": "P0",
+   "description": "The information system supports and maintains the binding of [ Assignment: organization-defined security attributes ] to information in storage, in process, and in transmission. ",
+   "SupplementalGuidance": "Security attributes are abstractions representing the basic properties or characteristics of an entity (e.g., subjects and objects) with respect to safeguarding information. These attributes are typically associated with internal data structures (e.g., records, buffers, files) within the information system and are used to enable the implementation of access control and flow control policies, reflect special dissemination, handling or distribution instructions, or support other aspects of the information security policy. The term security label is often used to associate a set of security attributes with a specific information object as part of the data structure for that object (e.g., user access privileges, nationality, affiliation as contractor). Related controls: AC-3, AC-4, SC-16, MP-3. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Access Control",
+   "id": "AC-17",
+   "Title": "Remote Access",
+   "Priority": "P1",
+   "description": "The organization: Documents allowed methods of remote access to the information system; Establishes usage restrictions and implementation guidance for each allowed remote access method; Monitors for unauthorized remote access to the information system; Authorizes remote access to the information system prior to connection; and Enforces requirements for remote connections to the information system. ",
+   "SupplementalGuidance": "This control requires explicit authorization prior to allowing remote access to an information system without specifying a specific format for that authorization. For example, while the organization may deem it appropriate to use a system interconnection agreement to authorize a given remote access, such agreements are not required by this control. Remote access is any access to an organizational information system by a user (or process acting on behalf of a user) communicating through an external network (e.g., the Internet). Examples of remote access methods include dial-up, broadband, and wireless (see AC-18 for wireless access). A virtual private network when adequately provisioned with appropriate security controls, is considered an internal network (i.e., the organization establishes a network connection between organization-controlled endpoints in a manner that does not require the organization to depend on external networks to protect the confidentiality or integrity of information transmitted across the network). Remote access controls are applicable to information systems other than public web servers or systems specifically designed for public access. Enforcing access restrictions associated with remote connections is accomplished by control AC-3. Related controls: AC-3, AC-18, AC-20, IA-2, IA-3, IA-8, MA-4. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Access Control",
+   "id": "AC-18",
+   "Title": "Wireless Access",
+   "Priority": "P1",
+   "description": "The organization: Establishes usage restrictions and implementation guidance for wireless access; Monitors for unauthorized wireless access to the information system; Authorizes wireless access to the information system prior to connection; and Enforces requirements for wireless connections to the information system. ",
+   "SupplementalGuidance": "Wireless technologies include, but are not limited to, microwave, satellite, packet radio (UHF/VHF), 802.11x, and Bluetooth. Wireless networks use authentication protocols (e.g., EAP/TLS, PEAP), which provide credential protection and mutual authentication. In certain situations, wireless signals may radiate beyond the confines and control of organization-controlled facilities. Related controls: AC-3, IA-2, IA-3, IA-8. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Access Control",
+   "id": "AC-19",
+   "Title": "Access Control for Mobile Devices",
+   "Priority": "P1",
+   "description": "The organization: Establishes usage restrictions and implementation guidance for organization-controlled mobile devices; Authorizes connection of mobile devices meeting organizational usage restrictions and implementation guidance to organizational information systems; Monitors for unauthorized connections of mobile devices to organizational information systems; Enforces requirements for the connection of mobile devices to organizational information systems; Disables information system functionality that provides the capability for automatic execution of code on mobile devices without user direction; Issues specially configured mobile devices to individuals traveling to locations that the organization deems to be of significant risk in accordance with organizational policies and procedures; and Applies [ Assignment: organization-defined inspection and preventative measures ] to mobile devices returning from locations that the organization deems to be of significant risk in accordance with organizational policies and procedures. ",
+   "SupplementalGuidance": "Mobile devices include portable storage media (e.g., USB memory sticks, external hard disk drives) and portable computing and communications devices with information storage capability (e.g., notebook/laptop computers, personal digital assistants, cellular telephones, digital cameras, and audio recording devices). Organization-controlled mobile devices include those devices for which the organization has the authority to specify and the ability to enforce specific security requirements. Usage restrictions and implementation guidance related to mobile devices include, for example, configuration management, device identification and authentication, implementation of mandatory protective software (e.g., malicious code detection, firewall), scanning devices for malicious code, updating virus protection software, scanning for critical software updates and patches, conducting primary operating system (and possibly other resident software) integrity checks, and disabling unnecessary hardware (e.g., wireless, infrared). Examples of information system functionality that provide the capability for automatic execution of code are AutoRun and AutoPlay. Organizational policies and procedures for mobile devices used by individuals departing on and returning from travel include, for example, determining which locations are of concern, defining required configurations for the devices, ensuring that the devices are configured as intended before travel is initiated, and applying specific measures to the device after travel is completed. Specially configured mobile devices include, for example, computers with sanitized hard drives, limited applications, and additional hardening (e.g., more stringent configuration settings). Specified measures applied to mobile devices upon return from travel include, for example, examining the device for signs of physical tampering and purging/reimaging the hard disk drive. Protecting information residing on mobile devices is covered in the media protection family. Related controls: MP-4, MP-5. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Access Control",
+   "id": "AC-20",
+   "Title": "Use of External Information Systems",
+   "Priority": "P1",
+   "description": "The organization establishes terms and conditions, consistent with any trust relationships established with other organizations owning, operating, and/or maintaining external information systems, allowing authorized individuals to: Access the information system from the external information systems; and Process, store, and/or transmit organization-controlled information using the external information systems. ",
+   "SupplementalGuidance": "External information systems are information systems or components of information systems that are outside of the authorization boundary established by the organization and for which the organization typically has no direct supervision and authority over the application of required security controls or the assessment of security control effectiveness. External information systems include, but are not limited to: (i) personally owned information systems (e.g., computers, cellular telephones, or personal digital assistants); (ii) privately owned computing and communications devices resident in commercial or public facilities (e.g., hotels, convention centers, or airports); (iii) information systems owned or controlled by nonfederal governmental organizations; and (iv) federal information systems that are not owned by, operated by, or under the direct supervision and authority of the organization. For some external systems, in particular those systems operated by other federal agencies, including organizations subordinate to those agencies, the trust relationships that have been established between those organizations and the originating organization may be such, that no explicit terms and conditions are required. In effect, the information systems of these organizations would not be considered external. These situations typically occur when, for example, there is some pre-existing sharing or trust agreement (either implicit or explicit) established between federal agencies and/or organizations subordinate to those agencies, or such trust agreements are specified by applicable laws, Executive Orders, directives, or policies. Authorized individuals include organizational personnel, contractors, or any other individuals with authorized access to the organizational information system and over which the organization has the authority to impose rules of behavior with regard to system access. The restrictions that an organization imposes on authorized individuals need not be uniform, as those restrictions are likely to vary depending upon the trust relationships between organizations. Thus, an organization might impose more stringent security restrictions on a contractor than on a state, local, or tribal government. This control does not apply to the use of external information systems to access public interfaces to organizational information systems and information (e.g., individuals accessing federal information through www.usa.gov). The organization establishes terms and conditions for the use of external information systems in accordance with organizational security policies and procedures. The terms and conditions address as a minimum; (i) the types of applications that can be accessed on the organizational information system from the external information system; and (ii) the maximum security categorization of information that can be processed, stored, and transmitted on the external information system. This control defines access authorizations enforced by AC-3, rules of behavior requirements enforced by PL-4, and session establishment rules enforced by AC-17. Related controls: AC-3, AC-17, PL-4. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Access Control",
+   "id": "AC-21",
+   "Title": "User-based Collaboration and Information Sharing",
+   "Priority": "P0",
+   "description": "The organization: Facilitates information sharing by enabling authorized users to determine whether access authorizations assigned to the sharing partner match the access restrictions on the information for [ Assignment: organization-defined information sharing circumstances where user discretion is required ]; and Employs [ Assignment: list of organization-defined information sharing circumstances and automated mechanisms or manual processes required ] to assist users in making information sharing/collaboration decisions. ",
+   "SupplementalGuidance": "The control applies to information that may be restricted in some manner (e.g., privileged medical, contract-sensitive, proprietary, personally identifiable information, special access programs/compartments) based on some formal or administrative determination. Depending on the information-sharing circumstance, the sharing partner may be defined at the individual, group, or organization level and information may be defined by specific content, type, or security categorization. Related control: AC-3. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Access Control",
+   "id": "AC-22",
+   "Title": "Publicly Accessible Content",
+   "Priority": "P2",
+   "description": "The organization: Designates individuals authorized to post information onto an organizational information system that is publicly accessible; Trains authorized individuals to ensure that publicly accessible information does not contain nonpublic information; Reviews the proposed content of publicly accessible information for nonpublic information prior to posting onto the organizational information system; Reviews the content on the publicly accessible organizational information system for nonpublic information [ Assignment: organization-defined frequency ]; and Removes nonpublic information from the publicly accessible organizational information system, if discovered. ",
+   "SupplementalGuidance": "Nonpublic information is any information for which the general public is not authorized access in accordance with federal laws, Executive Orders, directives, policies, regulations, standards, or guidance. Information protected under the Privacy Act and vendor proprietary information are examples of nonpublic information. This control addresses posting information on an organizational information system that is accessible to the general public, typically without identification or authentication. The posting of information on non-organization information systems is covered by appropriate organizational policy. Related controls: AC-3, AU-13. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Audit and Accountability",
+   "id": "AU-1",
+   "Title": "Audit and Accountability Policy and Procedures",
+   "Priority": "P1",
+   "description": "The organization develops, disseminates, and reviews/updates [ Assignment: organization-defined frequency ]: A formal, documented audit and accountability policy that addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and Formal, documented procedures to facilitate the implementation of the audit and accountability policy and associated audit and accountability controls. ",
+   "SupplementalGuidance": "This control is intended to produce the policy and procedures that are required for the effective implementation of selected security controls and control enhancements in the audit and accountability family. The policy and procedures are consistent with applicable federal laws, Executive Orders, directives, policies, regulations, standards, and guidance. Existing organizational policies and procedures may make the need for additional specific policies and procedures unnecessary. The audit and accountability policy can be included as part of the general information security policy for the organization. Audit and accountability procedures can be developed for the security program in general and for a particular information system, when required. The organizational risk management strategy is a key factor in the development of the audit and accountability policy. Related control: PM-9. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Audit and Accountability",
+   "id": "AU-2",
+   "Title": "Auditable Events",
+   "Priority": "P1",
+   "description": "The organization: Determines, based on a risk assessment and mission/business needs, that the information system must be capable of auditing the following events: [ Assignment: organization-defined list of auditable events ]; Coordinates the security audit function with other organizational entities requiring audit-related information to enhance mutual support and to help guide the selection of auditable events; Provides a rationale for why the list of auditable events are deemed to be adequate to support after-the-fact investigations of security incidents; and Determines, based on current threat information and ongoing assessment of risk, that the following events are to be audited within the information system: [ Assignment: organization-defined subset of the auditable events defined in AU-2 a. to be audited along with the frequency of (or situation requiring) auditing for each identified event ]. ",
+   "SupplementalGuidance": "The purpose of this control is for the organization to identify events which need to be auditable as significant and relevant to the security of the information system; giving an overall system requirement in order to meet ongoing and specific audit needs. To balance auditing requirements with other information system needs, this control also requires identifying that subset of auditable events that are to be audited at a given point in time. For example, the organization may determine that the information system must have the capability to log every file access both successful and unsuccessful, but not activate that capability except for specific circumstances due to the extreme burden on system performance. In addition, audit records can be generated at various levels of abstraction, including at the packet level as information traverses the network. Selecting the right level of abstraction for audit record generation is a critical aspect of an audit capability and can facilitate the identification of root causes to problems. Related control: AU-3. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Audit and Accountability",
+   "id": "AU-3",
+   "Title": "Content of Audit Records",
+   "Priority": "P1",
+   "description": "The information system produces audit records that contain sufficient information to, at a minimum, establish what type of event occurred, when (date and time) the event occurred, where the event occurred, the source of the event, the outcome (success or failure) of the event, and the identity of any user/subject associated with the event. ",
+   "SupplementalGuidance": "Audit record content that may be necessary to satisfy the requirement of this control, includes, for example, time stamps, source and destination addresses, user/process identifiers, event descriptions, success/fail indications, filenames involved, and access control or flow control rules invoked. Related controls: AU-2, AU-8. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Audit and Accountability",
+   "id": "AU-4",
+   "Title": "Audit Storage Capacity",
+   "Priority": "P1",
+   "description": "The organization allocates audit record storage capacity and configures auditing to reduce the likelihood of such capacity being exceeded. ",
+   "SupplementalGuidance": "The organization considers the types of auditing to be performed and the audit processing requirements when allocating audit storage capacity. Related controls: AU-2, AU-5, AU-6, AU-7, SI-4. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Audit and Accountability",
+   "id": "AU-5",
+   "Title": "Response To Audit Processing Failures",
+   "Priority": "P1",
+   "description": "The information system: Alerts designated organizational officials in the event of an audit processing failure; and Takes the following additional actions: [ Assignment: organization-defined actions to be taken (e.g., shut down information system, overwrite oldest audit records, stop generating audit records) ]. ",
+   "SupplementalGuidance": "Audit processing failures include, for example, software/hardware errors, failures in the audit capturing mechanisms, and audit storage capacity being reached or exceeded. Related control: AU-4. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Audit and Accountability",
+   "id": "AU-6",
+   "Title": "Audit Review, Analysis, and Reporting",
+   "Priority": "P1",
+   "description": "The organization: Reviews and analyzes information system audit records [ Assignment: organization-defined frequency ] for indications of inappropriate or unusual activity, and reports findings to designated organizational officials; and Adjusts the level of audit review, analysis, and reporting within the information system when there is a change in risk to organizational operations, organizational assets, individuals, other organizations, or the Nation based on law enforcement information, intelligence information, or other credible sources of information. ",
+   "SupplementalGuidance": "Related control: AU-7. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Audit and Accountability",
+   "id": "AU-7",
+   "Title": "Audit Reduction and Report Generation",
+   "Priority": "P2",
+   "description": "The information system provides an audit reduction and report generation capability. ",
+   "SupplementalGuidance": "An audit reduction and report generation capability provides support for near real-time audit review, analysis, and reporting requirements described in AU-6 and after-the-fact investigations of security incidents. Audit reduction and reporting tools do not alter original audit records. Related control: AU-6. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Audit and Accountability",
+   "id": "AU-8",
+   "Title": "Time Stamps",
+   "Priority": "P1",
+   "description": "The information system uses internal system clocks to generate time stamps for audit records. ",
+   "SupplementalGuidance": "Time stamps generated by the information system include both date and time. The time may be expressed in Coordinated Universal Time (UTC), a modern continuation of Greenwich Mean Time (GMT), or local time with an offset from UTC. Related control: AU-3. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Audit and Accountability",
+   "id": "AU-9",
+   "Title": "Protection of Audit Information",
+   "Priority": "P1",
+   "description": "The information system protects audit information and audit tools from unauthorized access, modification, and deletion. ",
+   "SupplementalGuidance": "Audit information includes all information (e.g., audit records, audit settings, and audit reports) needed to successfully audit information system activity. Related controls: AC-3, AC-6. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Audit and Accountability",
+   "id": "AU-10",
+   "Title": "Non-repudiation",
+   "Priority": "P1",
+   "description": "The information system protects against an individual falsely denying having performed a particular action. ",
+   "SupplementalGuidance": "Examples of particular actions taken by individuals include creating information, sending a message, approving information (e.g., indicating concurrence or signing a contract), and receiving a message. Non-repudiation protects individuals against later claims by an author of not having authored a particular document, a sender of not having transmitted a message, a receiver of not having received a message, or a signatory of not having signed a document. Non-repudiation services can be used to determine if information originated from an individual, or if an individual took specific actions (e.g., sending an email, signing a contract, approving a procurement request) or received specific information. Non-repudiation services are obtained by employing various techniques or mechanisms (e.g., digital signatures, digital message receipts). "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Audit and Accountability",
+   "id": "AU-11",
+   "Title": "Audit Record Retention",
+   "Priority": "P3",
+   "description": "The organization retains audit records for [ Assignment: organization-defined time period consistent with records retention policy ] to provide support for after-the-fact investigations of security incidents and to meet regulatory and organizational information retention requirements. ",
+   "SupplementalGuidance": "The organization retains audit records until it is determined that they are no longer needed for administrative, legal, audit, or other operational purposes. This includes, for example, retention and availability of audit records relative to Freedom of Information Act (FOIA) requests, subpoena, and law enforcement actions. Standard categorizations of audit records relative to such types of actions and standard response processes for each type of action are developed and disseminated. The National Archives and Records Administration (NARA) General Records Schedules (GRS) provide federal policy on record retention. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Audit and Accountability",
+   "id": "AU-12",
+   "Title": "Audit Generation",
+   "Priority": "P1",
+   "description": "The information system: Provides audit record generation capability for the list of auditable events defined in AU-2 at [ Assignment: organization-defined information system components ]; Allows designated organizational personnel to select which auditable events are to be audited by specific components of the system; and Generates audit records for the list of audited events defined in AU-2 with the content as defined in AU-3. ",
+   "SupplementalGuidance": "Audits records can be generated from various components within the information system. The list of audited events is the set of events for which audits are to be generated. This set of events is typically a subset of the list of all events for which the system is capable of generating audit records (i.e., auditable events). Related controls: AU-2, AU-3. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Audit and Accountability",
+   "id": "AU-13",
+   "Title": "Monitoring for Information Disclosure",
+   "Priority": "P0",
+   "description": "The organization monitors open source information for evidence of unauthorized exfiltration or disclosure of organizational information [ Assignment: organization-defined frequency ]. ",
+   "SupplementalGuidance": "None. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Audit and Accountability",
+   "id": "AU-14",
+   "Title": "Session Audit",
+   "Priority": "P0",
+   "description": "The information system provides the capability to: Capture/record and log all content related to a user session; and Remotely view/hear all content related to an established user session in real time. ",
+   "SupplementalGuidance": "Session auditing activities are developed, integrated, and used in consultation with legal counsel in accordance with applicable federal laws, Executive Orders, directives, policies, or regulations. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Identification and Authentication",
+   "id": "IA-1",
+   "Title": "Identification and Authentication Policy and Procedures",
+   "Priority": "P1",
+   "description": "The organization develops, disseminates, and reviews/updates [ Assignment: organization-defined frequency ]: A formal, documented identification and authentication policy that addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and Formal, documented procedures to facilitate the implementation of the identification and authentication policy and associated identification and authentication controls. ",
+   "SupplementalGuidance": "This control is intended to produce the policy and procedures that are required for the effective implementation of selected security controls and control enhancements in the identification and authentication family. The policy and procedures are consistent with applicable federal laws, Executive Orders, directives, policies, regulations, standards, and guidance. Existing organizational policies and procedures may make the need for additional specific policies and procedures unnecessary. The identification and authentication policy can be included as part of the general information security policy for the organization. Identification and authentication procedures can be developed for the security program in general and for a particular information system, when required. The organizational risk management strategy is a key factor in the development of the identification and authentication policy. Related control: PM-9. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Identification and Authentication",
+   "id": "IA-2",
+   "Title": "Identification and Authentication (Organizational Users)",
+   "Priority": "P1",
+   "description": "The information system uniquely identifies and authenticates organizational users (or processes acting on behalf of organizational users). ",
+   "SupplementalGuidance": "Organizational users include organizational employees or individuals the organization deems to have equivalent status of employees (e.g., contractors, guest researchers, individuals from allied nations). Users are uniquely identified and authenticated for all accesses other than those accesses explicitly identified and documented by the organization in AC-14. Unique identification of individuals in group accounts (e.g., shared privilege accounts) may need to be considered for detailed accountability of activity. Authentication of user identities is accomplished through the use of passwords, tokens, biometrics, or in the case of multifactor authentication, some combination thereof. Access to organizational information systems is defined as either local or network. Local access is any access to an organizational information system by a user (or process acting on behalf of a user) where such access is obtained by direct connection without the use of a network. Network access is any access to an organizational information system by a user (or process acting on behalf of a user) where such access is obtained through a network connection. Remote access is a type of network access which involves communication through an external network (e.g., the Internet). Internal networks include local area networks, wide area networks, and virtual private networks that are under the control of the organization. For a virtual private network (VPN), the VPN is considered an internal network if the organization establishes the VPN connection between organization-controlled endpoints in a manner that does not require the organization to depend on any external networks across which the VPN transits to protect the confidentiality and integrity of information transmitted. Identification and authentication requirements for information system access by other than organizational users are described in IA-8. The identification and authentication requirements in this control are satisfied by complying with Homeland Security Presidential Directive 12 consistent with organization-specific implementation plans provided to OMB. In addition to identifying and authenticating users at the information-system level (i.e., at logon), identification and authentication mechanisms are employed at the application level, when necessary, to provide increased information security for the organization. Related controls: AC-14, AC-17, AC-18, IA-4, IA-5. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Identification and Authentication",
+   "id": "IA-3",
+   "Title": "Device Identification and Authentication",
+   "Priority": "P1",
+   "description": "The information system uniquely identifies and authenticates [ Assignment: organization-defined list of specific and/or types of devices ] before establishing a connection. ",
+   "SupplementalGuidance": "The devices requiring unique identification and authentication may be defined by type, by specific device, or by a combination of type and device as deemed appropriate by the organization. The information system typically uses either shared known information (e.g., Media Access Control [MAC] or Transmission Control Protocol/Internet Protocol [TCP/IP] addresses) for identification or an organizational authentication solution (e.g., IEEE 802.1x and Extensible Authentication Protocol [EAP], Radius server with EAP-Transport Layer Security [TLS] authentication, Kerberos) to identify and authenticate devices on local and/or wide area networks. The required strength of the device authentication mechanism is determined by the security categorization of the information system. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Identification and Authentication",
+   "id": "IA-4",
+   "Title": "Identifier Management",
+   "Priority": "P1",
+   "description": "The organization manages information system identifiers for users and devices by: Receiving authorization from a designated organizational official to assign a user or device identifier; Selecting an identifier that uniquely identifies an individual or device; Assigning the user identifier to the intended party or the device identifier to the intended device; Preventing reuse of user or device identifiers for [ Assignment: organization-defined time period ]; and Disabling the user identifier after [ Assignment: organization-defined time period of inactivity ]. ",
+   "SupplementalGuidance": "Common device identifiers include media access control (MAC) or Internet protocol (IP) addresses, or device-unique token identifiers. Management of user identifiers is not applicable to shared information system accounts (e.g., guest and anonymous accounts). It is commonly the case that a user identifier is the name of an information system account associated with an individual. In such instances, identifier management is largely addressed by the account management activities of AC-2. IA-4 also covers user identifiers not necessarily associated with an information system account (e.g., the identifier used in a physical security control database accessed by a badge reader system for access to the information system). Related control: AC-2, IA-2. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Identification and Authentication",
+   "id": "IA-5",
+   "Title": "Authenticator Management",
+   "Priority": "P1",
+   "description": "The organization manages information system authenticators for users and devices by: Verifying, as part of the initial authenticator distribution, the identity of the individual and/or device receiving the authenticator; Establishing initial authenticator content for authenticators defined by the organization; Ensuring that authenticators have sufficient strength of mechanism for their intended use; Establishing and implementing administrative procedures for initial authenticator distribution, for lost/compromised or damaged authenticators, and for revoking authenticators; Changing default content of authenticators upon information system installation; Establishing minimum and maximum lifetime restrictions and reuse conditions for authenticators (if appropriate); Changing/refreshing authenticators [ Assignment: organization-defined time period by authenticator type ]; Protecting authenticator content from unauthorized disclosure and modification; and Requiring users to take, and having devices implement, specific measures to safeguard authenticators. ",
+   "SupplementalGuidance": "User authenticators include, for example, passwords, tokens, biometrics, PKI certificates, and key cards. Initial authenticator content is the actual content (e.g., the initial password) as opposed to requirements about authenticator content (e.g., minimum password length). Many information system components are shipped with factory default authentication credentials to allow for initial installation and configuration. Default authentication credentials are often well known, easily discoverable, present a significant security risk, and therefore, are changed upon installation. The requirement to protect user authenticators may be implemented via control PL-4 or PS-6 for authenticators in the possession of users and by controls AC-3, AC-6, and SC-28 for authenticators stored within the information system (e.g., passwords stored in a hashed or encrypted format, files containing encrypted or hashed passwords accessible only with super user privileges). The information system supports user authenticator management by organization-defined settings and restrictions for various authenticator characteristics including, for example, minimum password length, password composition, validation time window for time synchronous one time tokens, and id of allowed rejections during verification stage of biometric authentication. Measures to safeguard user authenticators include, for example, maintaining possession of individual authenticators, not loaning or sharing authenticators with others, and reporting lost or compromised authenticators immediately. Authenticator management includes issuing and revoking, when no longer needed, authenticators for temporary access such as that required for remote maintenance. Device authenticators include, for example, certificates and passwords. Related controls: AC-2, IA-2, PL-4, PS-6. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Identification and Authentication",
+   "id": "IA-6",
+   "Title": "Authenticator Feedback",
+   "Priority": "P1",
+   "description": "The information system obscures feedback of authentication information during the authentication process to protect the information from possible exploitation/use by unauthorized individuals ",
+   "SupplementalGuidance": "The feedback from the information system does not provide information that would allow an unauthorized user to compromise the authentication mechanism. Displaying asterisks when a user types in a password, is an example of obscuring feedback of authentication information. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Identification and Authentication",
+   "id": "IA-7",
+   "Title": "Cryptographic Module Authentication",
+   "Priority": "P1",
+   "description": "The information system uses mechanisms for authentication to a cryptographic module that meet the requirements of applicable federal laws, Executive Orders, directives, policies, regulations, standards, and guidance for such authentication. ",
+   "SupplementalGuidance": "None. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "Identification and Authentication",
+   "id": "IA-8",
+   "Title": "Identification and Authentication (Non-organizational Users)",
+   "Priority": "P1",
+   "description": "The information system uniquely identifies and authenticates non-organizational users (or processes acting on behalf of non-organizational users). ",
+   "SupplementalGuidance": "Non-organizational users include all information system users other than organizational users explicitly covered by IA-2. Users are uniquely identified and authenticated for all accesses other than those accesses explicitly identified and documented by the organization in accordance with AC-14. In accordance with the E-Authentication E-Government initiative, authentication of non-organizational users accessing federal information systems may be required to protect federal, proprietary, or privacy-related information (with exceptions noted for national security systems). Accordingly, a risk assessment is used in determining the authentication needs of the organization. Scalability, practicality, and security are simultaneously considered in balancing the need to ensure ease of use for access to federal information and information systems with the need to protect and adequately mitigate risk to organizational operations, organizational assets, individuals, other organizations, and the Nation. Identification and authentication requirements for information system access by organizational users are described in IA-2. Related controls: AC-14, AC-17, AC-18, MA-4. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-1",
+   "Title": "System and Communications Protection Policy and Procedures",
+   "Priority": "P1",
+   "description": "The organization develops, disseminates, and reviews/updates [ Assignment: organization-defined frequency ]: A formal, documented system and communications protection policy that addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and Formal, documented procedures to facilitate the implementation of the system and communications protection policy and associated system and communications protection controls. ",
+   "SupplementalGuidance": "This control is intended to produce the policy and procedures that are required for the effective implementation of selected security controls and control enhancements in the system and communications protection family. The policy and procedures are consistent with applicable federal laws, Executive Orders, directives, policies, regulations, standards, and guidance. Existing organizational policies and procedures may make the need for additional specific policies and procedures unnecessary. The system and communications protection policy can be included as part of the general information security policy for the organization. System and communications protection procedures can be developed for the security program in general and for a particular information system, when required. The organizational risk management strategy is a key factor in the development of the system and communications protection policy. Related control: PM-9. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-2",
+   "Title": "Application Partitioning",
+   "Priority": "P1",
+   "description": "The information system separates user functionality (including user interface services) from information system management functionality. ",
+   "SupplementalGuidance": "Information system management functionality includes, for example, functions necessary to administer databases, network components, workstations, or servers, and typically requires privileged user access. The separation of user functionality from information system management functionality is either physical or logical and is accomplished by using different computers, different central processing units, different instances of the operating system, different network addresses, combinations of these methods, or other methods as appropriate. An example of this type of separation is observed in web administrative interfaces that use separate authentication methods for users of any other information system resources. This may include isolating the administrative interface on a different domain and with additional access controls. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-3",
+   "Title": "Security Function Isolation",
+   "Priority": "P1",
+   "description": "The information system isolates security functions from nonsecurity functions. ",
+   "SupplementalGuidance": "The information system isolates security functions from nonsecurity functions by means of an isolation boundary (implemented via partitions and domains) that controls access to and protects the integrity of, the hardware, software, and firmware that perform those security functions. The information system maintains a separate execution domain (e.g., address space) for each executing process. Related control: SA-13. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-4",
+   "Title": "Information In Shared Resources",
+   "Priority": "P1",
+   "description": "The information system prevents unauthorized and unintended information transfer via shared system resources. ",
+   "SupplementalGuidance": "The purpose of this control is to prevent information, including encrypted representations of information, produced by the actions of a prior user/role (or the actions of a process acting on behalf of a prior user/role) from being available to any current user/role (or current process) that obtains access to a shared system resource (e.g., registers, main memory, secondary storage) after that resource has been released back to the information system. Control of information in shared resources is also referred to as object reuse. This control does not address: (i) information remanence which refers to residual representation of data that has been in some way nominally erased or removed; (ii) covert channels where shared resources are manipulated to achieve a violation of information flow restrictions; or (iii) components in the information system for which there is only a single user/role. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-5",
+   "Title": "Denial of Service Protection",
+   "Priority": "P1",
+   "description": "The information system protects against or limits the effects of the following types of denial of service attacks: [ Assignment: organization-defined list of types of denial of service attacks or reference to source for current list ]. ",
+   "SupplementalGuidance": "A variety of technologies exist to limit, or in some cases, eliminate the effects of denial of service attacks. For example, boundary protection devices can filter certain types of packets to protect devices on an organizations internal network from being directly affected by denial of service attacks. Employing increased capacity and bandwidth combined with service redundancy may reduce the susceptibility to some denial of service attacks. Related control: SC-7. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-6",
+   "Title": "Resource Priority",
+   "Priority": "P0",
+   "description": "The information system limits the use of resources by priority. ",
+   "SupplementalGuidance": "Priority protection helps prevent a lower-priority process from delaying or interfering with the information system servicing any higher-priority process. This control does not apply to components in the information system for which there is only a single user/role. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-7",
+   "Title": "Boundary Protection",
+   "Priority": "P1",
+   "description": "The information system: Monitors and controls communications at the external boundary of the system and at key internal boundaries within the system; and Connects to external networks or information systems only through managed interfaces consisting of boundary protection devices arranged in accordance with an organizational security architecture. ",
+   "SupplementalGuidance": "Restricting external web traffic only to organizational web servers within managed interfaces and prohibiting external traffic that appears to be spoofing an internal address as the source are examples of restricting and prohibiting communications. Managed interfaces employing boundary protection devices include, for example, proxies, gateways, routers, firewalls, guards, or encrypted tunnels arranged in an effective security architecture (e.g., routers protecting firewalls and application gateways residing on a protected subnetwork commonly referred to as a demilitarized zone or DMZ). The organization considers the intrinsically shared nature of commercial telecommunications services in the implementation of security controls associated with the use of such services. Commercial telecommunications services are commonly based on network components and consolidated management systems shared by all attached commercial customers, and may include third-party provided access lines and other service elements. Consequently, such interconnecting transmission services may represent sources of increased risk despite contract security provisions. Therefore, when this situation occurs, the organization either implements appropriate compensating security controls or explicitly accepts the additional risk. Related controls: AC-4, IR-4, SC-5. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-8",
+   "Title": "Transmission Integrity",
+   "Priority": "P1",
+   "description": "The information system protects the integrity of transmitted information. ",
+   "SupplementalGuidance": "This control applies to communications across internal and external networks. If the organization is relying on a commercial service provider for transmission services as a commodity item rather than a fully dedicated service, it may be more difficult to obtain the necessary assurances regarding the implementation of needed security controls for transmission integrity. When it is infeasible or impractical to obtain the necessary security controls and assurances of control effectiveness through appropriate contracting vehicles, the organization either implements appropriate compensating security controls or explicitly accepts the additional risk. Related controls: AC-17, PE-4. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-9",
+   "Title": "Transmission Confidentiality",
+   "Priority": "P1",
+   "description": "The information system protects the confidentiality of transmitted information. ",
+   "SupplementalGuidance": "This control applies to communications across internal and external networks. If the organization is relying on a commercial service provider for transmission services as a commodity item rather than a fully dedicated service, it may be more difficult to obtain the necessary assurances regarding the implementation of needed security controls for transmission confidentiality. When it is infeasible or impractical to obtain the necessary security controls and assurances of control effectiveness through appropriate contracting vehicles, the organization either implements appropriate compensating security controls or explicitly accepts the additional risk. Related controls: AC-17, PE-4. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-10",
+   "Title": "Network Disconnect",
+   "Priority": "P2",
+   "description": "The information system terminates the network connection associated with a communications session at the end of the session or after [ Assignment: organization-defined time period ] of inactivity. ",
+   "SupplementalGuidance": "This control applies to both internal and external networks. Terminating network connections associated with communications sessions include, for example, de-allocating associated TCP/IP address/port pairs at the operating-system level, or de-allocating networking assignments at the application level if multiple application sessions are using a single, operating system-level network connection. The time period of inactivity may, as the organization deems necessary, be a set of time periods by type of network access or for specific accesses. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-11",
+   "Title": "Trusted Path",
+   "Priority": "P0",
+   "description": "The information system establishes a trusted communications path between the user and the following security functions of the system: [ Assignment: organization-defined security functions to include at a minimum, information system authentication and reauthentication ]. ",
+   "SupplementalGuidance": "A trusted path is employed for high-confidence connections between the security functions of the information system and the user (e.g., for login). "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-12",
+   "Title": "Cryptographic Key Establishment and Management",
+   "Priority": "P1",
+   "description": "The organization establishes and manages cryptographic keys for required cryptography employed within the information system. ",
+   "SupplementalGuidance": "Cryptographic key management and establishment can be performed using manual procedures or automated mechanisms with supporting manual procedures. In addition to being required for the effective operation of a cryptographic mechanism, effective cryptographic key management provides protections to maintain the availability of the information in the event of the loss of cryptographic keys by users. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-13",
+   "Title": "Use of Cryptography",
+   "Priority": "P1",
+   "description": "The information system implements required cryptographic protections using cryptographic modules that comply with applicable federal laws, Executive Orders, directives, policies, regulations, standards, and guidance. ",
+   "SupplementalGuidance": "None. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-14",
+   "Title": "Public Access Protections",
+   "Priority": "P1",
+   "description": "The information system protects the integrity and availability of publicly available information and applications. ",
+   "SupplementalGuidance": "The purpose of this control is to ensure that organizations explicitly address the protection needs for public information and applications with such protection likely being implemented as part of other security controls. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-15",
+   "Title": "Collaborative Computing Devices",
+   "Priority": "P1",
+   "description": "The information system: Prohibits remote activation of collaborative computing devices with the following exceptions: [ Assignment: organization-defined exceptions where remote activation is to be allowed ]; and Provides an explicit indication of use to users physically present at the devices. ",
+   "SupplementalGuidance": "Collaborative computing devices include, for example, networked white boards, cameras, and microphones. Explicit indication of use includes, for example, signals to users when collaborative computing devices are activated "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-16",
+   "Title": "Transmission of Security Attributes",
+   "Priority": "P0",
+   "description": "The information system associates security attributes with information exchanged between information systems. ",
+   "SupplementalGuidance": "Security attributes may be explicitly or implicitly associated with the information contained within the information system. Related control: AC-16. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-17",
+   "Title": "Public Key Infrastructure Certificates",
+   "Priority": "P1",
+   "description": "The organization issues public key certificates under an [ Assignment: organization-defined certificate policy ] or obtains public key certificates under an appropriate certificate policy from an approved service provider. ",
+   "SupplementalGuidance": "For user certificates, each organization attains certificates from an approved, shared service provider, as required by OMB policy. For federal agencies operating a legacy public key infrastructure cross-certified with the Federal Bridge Certification Authority at medium assurance or higher, this Certification Authority will suffice. This control focuses on certificates with a visibility external to the information system and does not include certificates related to internal system operations, for example, application-specific time services. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-18",
+   "Title": "Mobile Code",
+   "Priority": "P1",
+   "description": "The organization: Defines acceptable and unacceptable mobile code and mobile code technologies; Establishes usage restrictions and implementation guidance for acceptable mobile code and mobile code technologies; and Authorizes, monitors, and controls the use of mobile code within the information system. ",
+   "SupplementalGuidance": "Decisions regarding the employment of mobile code within organizational information systems are based on the potential for the code to cause damage to the system if used maliciously. Mobile code technologies include, for example, Java, JavaScript, ActiveX, PDF, Postscript, Shockwave movies, Flash animations, and VBScript. Usage restrictions and implementation guidance apply to both the selection and use of mobile code installed on organizational servers and mobile code downloaded and executed on individual workstations. Policy and procedures related to mobile code, address preventing the development, acquisition, or introduction of unacceptable mobile code within the information system. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-19",
+   "Title": "Voice Over Internet Protocol",
+   "Priority": "P1",
+   "description": "The organization: Establishes usage restrictions and implementation guidance for Voice over Internet Protocol (VoIP) technologies based on the potential to cause damage to the information system if used maliciously; and Authorizes, monitors, and controls the use of VoIP within the information system. ",
+   "SupplementalGuidance": "None. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-20",
+   "Title": "Secure Name / Address Resolution Service (Authoritative Source)",
+   "Priority": "P1",
+   "description": "The information system provides additional data origin and integrity artifacts along with the authoritative data the system returns in response to name/address resolution queries. ",
+   "SupplementalGuidance": "This control enables remote clients to obtain origin authentication and integrity verification assurances for the host/service name to network address resolution information obtained through the service. A domain name system (DNS) server is an example of an information system that provides name/address resolution service. Digital signatures and cryptographic keys are examples of additional artifacts. DNS resource records are examples of authoritative data. Information systems that use technologies other than the DNS to map between host/service names and network addresses provide other means to assure the authenticity and integrity of response data. The DNS security controls are consistent with, and referenced from, OMB Memorandum 08-23. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-21",
+   "Title": "Secure Name / Address Resolution Service (Recursive Or Caching Resolver)",
+   "Priority": "P1",
+   "description": "The information system performs data origin authentication and data integrity verification on the name/address resolution responses the system receives from authoritative sources when requested by client systems. ",
+   "SupplementalGuidance": "A recursive resolving or caching domain name system (DNS) server is an example of an information system that provides name/address resolution service for local clients. Authoritative DNS servers are examples of authoritative sources. Information systems that use technologies other than the DNS to map between host/service names and network addresses provide other means to enable clients to verify the authenticity and integrity of response data. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-22",
+   "Title": "Architecture and Provisioning for Name / Address Resolution Service",
+   "Priority": "P1",
+   "description": "The information systems that collectively provide name/address resolution service for an organization are fault-tolerant and implement internal/external role separation. ",
+   "SupplementalGuidance": "A domain name system (DNS) server is an example of an information system that provides name/address resolution service. To eliminate single points of failure and to enhance redundancy, there are typically at least two authoritative domain name system (DNS) servers, one configured as primary and the other as secondary. Additionally, the two servers are commonly located in two different network subnets and geographically separated (i.e., not located in the same physical facility). With regard to role separation, DNS servers with an internal role, only process name/address resolution requests from within the organization (i.e., internal clients). DNS servers with an external role only process name/address resolution information requests from clients external to the organization (i.e., on the external networks including the Internet). The set of clients that can access an authoritative DNS server in a particular role is specified by the organization (e.g., by address ranges, explicit lists). "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-23",
+   "Title": "Session Authenticity",
+   "Priority": "P1",
+   "description": "The information system provides mechanisms to protect the authenticity of communications sessions. ",
+   "SupplementalGuidance": "This control focuses on communications protection at the session, versus packet, level. The intent of this control is to establish grounds for confidence at each end of a communications session in the ongoing identity of the other party and in the validity of the information being transmitted. For example, this control addresses man-in-the-middle attacks including session hijacking or insertion of false information into a session. This control is only implemented where deemed necessary by the organization (e.g., sessions in service-oriented architectures providing web-based services). "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-24",
+   "Title": "Fail In Known State",
+   "Priority": "P1",
+   "description": "The information system fails to a [ Assignment: organization-defined known-state ] for [ Assignment: organization-defined types of failures ] preserving [ Assignment: organization-defined system state information ] in failure. ",
+   "SupplementalGuidance": "Failure in a known state can address safety or security in accordance with the mission/business needs of the organization. Failure in a known secure state helps prevent a loss of confidentiality, integrity, or availability in the event of a failure of the information system or a component of the system. Failure in a known safe state helps prevent systems from failing to a state that may cause injury to individuals or destruction to property. Preserving information system state information facilitates system restart and return to the operational mode of the organization with less disruption of mission/business processes. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-25",
+   "Title": "Thin Nodes",
+   "Priority": "P0",
+   "description": "The information system employs processing components that have minimal functionality and information storage. ",
+   "SupplementalGuidance": "The deployment of information system components with minimal functionality (e.g., diskless nodes and thin client technologies) reduces the need to secure every user endpoint, and may reduce the exposure of information, information systems, and services to a successful attack. Related control: SC-30. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-26",
+   "Title": "Honeypots",
+   "Priority": "P0",
+   "description": "The information system includes components specifically designed to be the target of malicious attacks for the purpose of detecting, deflecting, and analyzing such attacks. ",
+   "SupplementalGuidance": "None. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-27",
+   "Title": "Operating System-independent Applications",
+   "Priority": "P0",
+   "description": "The information system includes: [ Assignment: organization-defined operating system-independent applications ]. ",
+   "SupplementalGuidance": "Operating system-independent applications are applications that can run on multiple operating systems. Such applications promote portability and reconstitution on different platform architectures, increasing the availability for critical functionality within an organization while information systems with a given operating system are under attack. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-28",
+   "Title": "Protection of Information At Rest",
+   "Priority": "P1",
+   "description": "The information system protects the confidentiality and integrity of information at rest. ",
+   "SupplementalGuidance": "This control is intended to address the confidentiality and integrity of information at rest in nonmobile devices and covers user information and system information. Information at rest refers to the state of information when it is located on a secondary storage device (e.g., disk drive, tape drive) within an organizational information system. Configurations and/or rule sets for firewalls, gateways, intrusion detection/prevention systems, and filtering routers and authenticator content are examples of system information likely requiring protection. Organizations may choose to employ different mechanisms to achieve confidentiality and integrity protections, as appropriate. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-29",
+   "Title": "Heterogeneity",
+   "Priority": "P0",
+   "description": "The organization employs diverse information technologies in the implementation of the information system. ",
+   "SupplementalGuidance": "Increasing the diversity of information technologies within the information system reduces the impact of the exploitation of a specific technology. Organizations that select this control should consider that an increase in diversity may add complexity and management overhead, both of which have the potential to lead to mistakes and misconfigurations which could increase overall risk. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-30",
+   "Title": "Virtualization Techniques",
+   "Priority": "P0",
+   "description": "The organization employs virtualization techniques to present information system components as other types of components, or components with differing configurations. ",
+   "SupplementalGuidance": "Virtualization techniques provide organizations with the ability to disguise information systems, potentially reducing the likelihood of successful attacks without the cost of having multiple platforms. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-31",
+   "Title": "Covert Channel Analysis",
+   "Priority": "P0",
+   "description": "The organization requires that information system developers/integrators perform a covert channel analysis to identify those aspects of system communication that are potential avenues for covert storage and timing channels. ",
+   "SupplementalGuidance": "Information system developers/integrators are in the best position to identify potential avenues within the system that might lead to covert channels. Covert channel analysis is a meaningful activity when there is the potential for unauthorized information flows across security domains, for example, in the case of information systems containing export-controlled information and having connections to external networks (i.e., networks not controlled by the organization). Covert channel analysis is also meaningful in the case of multilevel secure (MLS) systems, multiple security level (MSL) systems, and cross domain systems. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-32",
+   "Title": "Information System Partitioning",
+   "Priority": "P1",
+   "description": "The organization partitions the information system into components residing in separate physical domains (or environments) as deemed necessary. ",
+   "SupplementalGuidance": "Information system partitioning is a part of a defense-in-depth protection strategy. An organizational assessment of risk guides the partitioning of information system components into separate physical domains (or environments). The security categorization also guides the selection of appropriate candidates for domain partitioning. Managed interfaces restrict or prohibit network access and information flow among partitioned information system components. Related controls: AC-4, SC-7. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-33",
+   "Title": "Transmission Preparation Integrity",
+   "Priority": "P0",
+   "description": "The information system protects the integrity of information during the processes of data aggregation, packaging, and transformation in preparation for transmission. ",
+   "SupplementalGuidance": "Information can be subjected to unauthorized changes (e.g., malicious and/or unintentional modification) at information aggregation or protocol transformation points. "
+ },
+ {
+   "Class": "Technical",
+   "Family": "System and Communications Protection",
+   "id": "SC-34",
+   "Title": "Non-modifiable Executable Programs",
+   "Priority": "P0",
+   "description": "The information system at [ Assignment: organization-defined information system components ]: Loads and executes the operating environment from hardware-enforced, read-only media; and Loads and executes [ Assignment: organization-defined applications ] from hardware-enforced, read-only media. ",
+   "SupplementalGuidance": "In this control, the term operating environment is defined as the code upon which applications are hosted, for example, a monitor, executive, operating system, or application running directly on the hardware platform. Hardware-enforced, read-only media include, for example, CD-R/DVD-R disk drives. Use of non-modifiable storage ensures the integrity of the software program from the point of creation of the read-only image. "
+ }
+]
+}
