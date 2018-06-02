@@ -12,7 +12,7 @@ const app = express();
 const port=process.env.PORT || 9090;
 
 //Set Database connection
-mongoose.connect('mongodb://localhost/caudit')
+mongoose.connect('mongodb://user1:p@ssw0rd3@ds245680.mlab.com:45680/caudit')
   .then(() => console.log('MongoDb connected.'))
   .catch(err => console.log(err));
 
