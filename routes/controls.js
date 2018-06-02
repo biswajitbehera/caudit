@@ -1,8 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
+const { ensureAuthenticated } = require('../helpers/auth');
+
 //Get all cbsp controls
-router.get('/controls',function(request, response){
+router.get('/controls',ensureAuthenticated,function(request, response){
   var info ='';
   var count = 0;
   var frameworkname='';
@@ -29,7 +31,7 @@ router.get('/controls',function(request, response){
 })
 
 //Get details of a single control
-router.get('/controls/:cid',function(request, response){
+router.get('/controls/:cid',ensureAuthenticated,function(request, response){
   data = request.app.get('appData');
   var control = data.controls[request.params.cid];
 

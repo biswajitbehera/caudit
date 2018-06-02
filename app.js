@@ -3,7 +3,9 @@ const express = require('express');
 const reload = require('reload');
 const chart = require('chart.js');
 const mongoose = require('mongoose');
-
+const flash = require('connect-flash');
+const session = require('express-session');
+const passport = require('passport');
 const app = express();
 
 //Global variables
@@ -28,6 +30,26 @@ app.set('appData',data);
 //Static folder path for images, stylesheets and scripts
 app.use(express.static('static'));
 
+//session, passport and flash
+app.use(session({
+  secret: 'd7xtdz8t8ft76d767g',
+  resave: true,
+  saveUninitialized: true
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use(flash());
+
+app.use((req, res, next) => {
+  res.locals.success_msg = req.flash('success_msg');
+  res.locals.error_msg = req.flash('error_msg');
+  res.locals.error = req.flash('error');
+  res.locals.user = req.user || null;
+  next();
+});
+
 //Set EJS templating engine
 app.set('view engine', 'ejs');
 app.set('views', './views/');
@@ -38,6 +60,9 @@ app.use(require('./routes/index'));
 app.use(require('./routes/controls'));
 app.use(require('./routes/audits'));
 app.use(require('./routes/account'));
+
+//Passport Config
+require('./config/passport')(passport);
 
 // for(var category in findings){
 //   if (findings[category].status!="OK"){

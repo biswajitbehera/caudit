@@ -5,8 +5,9 @@ var findings;
 var path ="./data/reports";
 var rstats = ['OK','WARN','FAIL','UNKNOWN'];
 var issues = [0,0,0,0];
+const { ensureAuthenticated } = require('../helpers/auth');
 
-router.get('/audits',function(request, response){
+router.get('/audits',ensureAuthenticated,function(request, response){
   var files=[];
       files=fs.readdirSync(path);
   response.render('audits',{
@@ -16,7 +17,7 @@ router.get('/audits',function(request, response){
     });
 })
 
-router.get('/audits/:report',function(request, response){
+router.get('/audits/:report', ensureAuthenticated,function(request, response){
     var reportname = request.params.report;
     var report = fs.readFileSync(path+'/'+reportname);
     findings = JSON.parse(report);
