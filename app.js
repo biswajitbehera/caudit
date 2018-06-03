@@ -14,7 +14,7 @@ var bodyParser = require('body-parser');
 const port=process.env.PORT || 9090;
 
 //Set Database connection
-mongoose.connect('mongodb://localhost/caudit')
+mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('MongoDb connected.'))
   .catch(err => console.log(err));
 
@@ -37,7 +37,7 @@ app.use(express.static('static'));
 
 //session, passport and flash
 app.use(session({
-  secret: 'd7xtdz8t8ft76d767g',
+  secret: process.env.SECRET,
   resave: true,
   saveUninitialized: true
 }));
