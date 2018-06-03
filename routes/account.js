@@ -33,7 +33,7 @@ router.get('/account/login',function(request, response){
     });
 });
 
-router.post('/account/login',function(request,response){
+router.post('/account/login',function(req,res,next){
     passport.authenticate('local', {
       successRedirect: '/controls',
       failureRedirect: '/account/register',
@@ -42,7 +42,7 @@ router.post('/account/login',function(request,response){
 });
 
 //Code for register POST
-router.post('/account/register', (request, response)=>{
+router.post('/account/register', (req, res)=>{
   let errors = [];
 
   if (req.body.password.length < 4) {
@@ -90,10 +90,10 @@ router.post('/account/register', (request, response)=>{
   }
 });
 
-router.get('/account/logout', (request,response)=>{
+router.get('/account/logout', (req,res)=>{
   req.logout();
   req.flash('success_msg', 'You are logged out');
-  res.redirect('/users/login');
+  res.redirect('/');
 });
 
 module.exports = router;

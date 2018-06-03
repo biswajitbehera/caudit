@@ -7,6 +7,8 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
 const app = express();
+var bodyParser = require('body-parser');
+
 
 //Global variables
 const port=process.env.PORT || 9090;
@@ -26,6 +28,9 @@ app.locals.reportPath ="data/reports";
 
 //Set data
 app.set('appData',data);
+
+//for receiving post data
+app.use(bodyParser.urlencoded({ extended: false }));
 
 //Static folder path for images, stylesheets and scripts
 app.use(express.static('static'));
@@ -60,6 +65,8 @@ app.use(require('./routes/index'));
 app.use(require('./routes/controls'));
 app.use(require('./routes/audits'));
 app.use(require('./routes/account'));
+
+
 
 //Passport Config
 require('./config/passport')(passport);
