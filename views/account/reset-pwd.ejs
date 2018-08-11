@@ -38,21 +38,14 @@
                     <% include ../partials/template/msg.ejs %>
                     <div class="card card-body">
                         <form method="post">
-                            <legend>Access Caudit</legend>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" class="form-control" name="email" required>
-                            </div>
+                            <legend>New Password</legend>
                             <div class="form-group">
                                 <label for="password">Password</label>
-                                <input type="password" class="form-control" name="password" required>
+                                <input type="password" class="form-control" name="password" id="password" required>
                             </div>
-                            <button type="submit" class="btn btn-primary">Login</button>
+                            <input type="hidden" name="uid" value="<%=uid%>" />
+                            <button type="submit" class="btn btn-primary">Reset Password</button>
                         </form>
-                        <br>
-                        New User ? <a href="/account/register">Create Account</a>
-                        <br>
-                        <a href="/account/fg-password">Forgot Password</a>
                     </div>
                 </div>
             </div>

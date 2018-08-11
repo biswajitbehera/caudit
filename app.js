@@ -38,8 +38,14 @@ app.use(express.static('static'));
 //session, passport and flash
 app.use(session({
   secret: process.env.SECRET,
-  resave: true,
-  saveUninitialized: true
+  cookie: {
+    path: '/',
+    httpOnly: true,
+    secure: false,
+    maxAge: 15 * 60000
+  },
+  rolling: true,
+  saveUninitialized: true,
 }));
 
 app.use(passport.initialize());

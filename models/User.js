@@ -15,9 +15,16 @@ const UserSchema = new Schema({
         type: String,
         required: true
     },
+    verified:{
+        type: Number,
+        default: 0
+    },
     date:{
         type: Date,
         default: Date.now()
+    },
+    pwd_expiry:{
+        type: Date
     }
 });
 
