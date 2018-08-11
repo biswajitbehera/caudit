@@ -100,7 +100,7 @@ router.post('/account/register', (req, res)=>{
                         from: process.env.GMAIL, // sender address
                         to: user.email, // list of receivers
                         subject: 'Verify your CAudit account', // Subject line
-                        html: '<p>Hi '+user.name+',</p><p>Please verify your CAudit account by clicking on this link: <a href="'+process.env.SITE_URL+'account/verify/'+user._id+'">Verify Account</a></p>'// plain text body
+                        html: '<p>Hi '+user.name+',</p><p>Please verify your CAudit account by clicking on this link: <a href="'+process.env.SITE_URL+'account/verify/'+user._id+'">Verify Account</a></p>Regards, <br> CAudit Team'
                     };
 
                     transporter.sendMail(mailOptions, (err, info) => {
@@ -175,7 +175,7 @@ router.post("/account/fg-password", (req,res) => {
                         from: process.env.GMAIL, // sender address
                         to: user.email, // list of receivers
                         subject: 'Reset password for your CAudit account', // Subject line
-                        html: '<p>Hi '+user.name+',</p><p>Please reset your CAudit account password by clicking on this link: <a href="'+process.env.SITE_URL+'account/reset-pwd/'+user._id+'">Reset Password</a></p>'// plain text body
+                        html: '<p>Hi '+user.name+',</p><p>Please reset your CAudit account password by clicking on this link: <a href="'+process.env.SITE_URL+'account/reset-pwd/'+user._id+'">Reset Password</a></p>Regards, <br> CAudit Team'// plain text body
                     };
 
           transporter.sendMail(mailOptions, (err, info) => {
