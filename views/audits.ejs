@@ -9,16 +9,13 @@
       <% include partials/template/header.ejs %>
   <!-- header ends -->
 
-<!-- Container -->
-  <div class="container">
-      <div class="row">
-        <div class="col-sm-8">
-          <div class="maincontent">
-            <h2>Audit reports repository</h2>
 
-            <% if (files.length>0){ var i=0; %>
-              <h4>It seems there are <%= files.length %> reports. Click on report for more info.</h4>
-              <p><b>Reports</b></p>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Audit reports repository.</h1>
+    <p class="lead">It seems there are <%= files.length %> reports. Click on report for more info.</p>
+    <% if (files.length>0){ var i=0; %>
+              <p><strong>Reports</strong></p>
               <ul class="list-group">
             <%  files.forEach(function(item){ %>
               <% var ftdate = item.substring(3, item.indexOf('.js')); %>
@@ -27,15 +24,12 @@
                 <li class="list-group-item"><a href="/audits/<%= item %>"><%= ite %></a> | Scantime - <%=date%></li>
               <% i++;}) %></ul>
             <% }else{ %><h2>No reports were found!</h2><% } %>
-            <p><i>Scans are performed by internal toolkit.</i></p>
-          </div>
-        </div><!-- primary -->
-        <aside class="col-sm-4">
+            <br>
+            <p><em>Scans are performed by internal toolkit.</em></p>
+  </div>
+</div>
 
-        </aside><!-- secondary -->
-      </div>
-    </div>
-<!-- Container ends -->
+
 
 <% include partials/template/footer.ejs %>
 <script src="/reload/reload.js"></script>

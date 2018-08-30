@@ -9,6 +9,9 @@ const passport = require('passport');
 const app = express();
 var bodyParser = require('body-parser');
 
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').load();
+}
 
 //Global variables
 const port=process.env.PORT || 9090;

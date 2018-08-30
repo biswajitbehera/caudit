@@ -186,10 +186,7 @@ router.post("/account/fg-password", (req,res) => {
                req.flash('success_msg','An email has been sent to your email address. Please follow the instructions and reset your password');
              }
 
-             res.render('account/fg-password',{
-                pageTitle: 'Forgot Password',
-                pageId: 'forgotpassword'
-              });
+             res.redirect('/account/fg-password');
              
           });            
         }
@@ -219,7 +216,7 @@ router.post('/account/reset-pwd/:uid',(req,res) => {
         end_date = end_date.getHours();
         duration = end_date - start_date;
 
-        if(duration < 5){
+        if(duration < 5 && duration > 0){
 
             bcrypt.genSalt(10, (err, salt) => {
                 bcrypt.hash(req.body.password, salt, (err, hash) => {
@@ -252,7 +249,7 @@ router.post('/account/reset-pwd/:uid',(req,res) => {
 
 router.get('/account/logout', (req,res)=>{
   req.logout();
-  req.flash('success_msg', 'You have successfully logged out of Caudit');
+  req.flash('success_msg', 'You have logged out of caudit.');
   res.redirect('/account/login');
 });
 

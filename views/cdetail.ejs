@@ -10,25 +10,22 @@
   <!-- header ends -->
 
 <!-- Container -->
+  <div class="jumbotron jumbotron-fluid">
   <div class="container">
-      <div class="row">
-        <div class="col-sm-8">
-          <div class="maincontent">
-            <h2>Control details</h2> <h4>Cloud Control ID - <%= control.id %></h4>
-            <ul class="list-group">
-              <li class="list-group-item"><b>Family</b> <%= control.type %></li>
-              <li class="list-group-item"><b>Title</b> <%= control.title %></li>
-              <li class="list-group-item"><b>Description</b> <%= control.description %></li>
-            </ul>
-            <a href="/controls" class="btn btn-info" role="button">All controls</a>
-          </div>
-        </div><!-- primary -->
-        <aside class="col-sm-4">
-
-        </aside><!-- secondary -->
-      </div>
-    </div>
-<!-- Container ends -->
+    <h1 class="display-4">Control details</h1>
+    <p class="lead">Cloud Control ID - <%= control.id %></p>
+    <p>
+      <ul class="list-group">
+        <li class="list-group-item"><b>Family</b> <%= control.type %></li>
+        <li class="list-group-item"><b>Title</b> <%= control.title %></li>
+        <li class="list-group-item"><b>Description</b> <%= control.description %></li>
+      </ul>
+      <br>
+      <a href="/controls" class="btn btn-info" role="button">All controls</a>
+    </p>
+  </div>
+</div>
+  
 
 <% include partials/template/footer.ejs %>
 
