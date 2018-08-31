@@ -216,7 +216,7 @@ router.post('/account/reset-pwd/:uid',(req,res) => {
         end_date = end_date.getHours();
         duration = end_date - start_date;
 
-        if(duration < 5 && duration > 0){
+        if(duration < 5 && duration >= 0){
 
             bcrypt.genSalt(10, (err, salt) => {
                 bcrypt.hash(req.body.password, salt, (err, hash) => {
